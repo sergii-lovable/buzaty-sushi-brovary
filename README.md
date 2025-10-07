@@ -62,12 +62,44 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### GitHub Pages (puzati.brovary.org)
+
+This project is configured to deploy automatically to GitHub Pages at **puzati.brovary.org**.
+
+#### Initial Setup (One-time)
+
+1. Go to your GitHub repository settings
+2. Navigate to **Settings** > **Pages**
+3. Under **Source**, select **GitHub Actions**
+4. Under **Custom domain**, enter `puzati.brovary.org` (if not already set)
+5. Wait for DNS check to complete
+
+#### DNS Configuration
+
+Make sure your DNS provider has the following records:
+
+**A Records** (point to GitHub Pages servers):
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+**CNAME Record** (if using www subdomain):
+```
+www.puzati.brovary.org CNAME <your-github-username>.github.io
+```
+
+#### Automatic Deployment
+
+Every push to the `main` branch will automatically trigger a deployment via GitHub Actions. The workflow will:
+1. Build the project
+2. Copy the CNAME file
+3. Deploy to GitHub Pages
+
+You can also manually trigger a deployment from the **Actions** tab in GitHub.
+
+### Alternative: Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/4ed397dc-d132-4b4c-94e9-16f06bc23a29) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
