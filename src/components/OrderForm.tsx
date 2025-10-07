@@ -34,18 +34,15 @@ const OrderForm = ({ isOpen, onClose, items, total, onOrderComplete }: OrderForm
       `${item.name} x${item.quantity} - ${item.price * item.quantity} ₴`
     ).join('\n');
 
-    // URL вашої Google Form (замініть на свій)
-    // Інструкція: створіть Google Form з полями: Ім'я, Телефон, Адреса, Замовлення, Коментар, Сума
-    // Отримайте prefilled URL та замініть entry.XXXXX на відповідні ID полів
-    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse";
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfFQdUKSO3XZI4_kE4e9kLvlWBmii6gCmWl5YLsWOIDR-MCHA/formResponse";
     
     const formBody = new URLSearchParams({
-      "entry.YOUR_NAME_FIELD_ID": formData.name,
-      "entry.YOUR_PHONE_FIELD_ID": formData.phone,
-      "entry.YOUR_ADDRESS_FIELD_ID": formData.address,
-      "entry.YOUR_ORDER_FIELD_ID": orderDetails,
-      "entry.YOUR_COMMENT_FIELD_ID": formData.comment,
-      "entry.YOUR_TOTAL_FIELD_ID": `${total} ₴`
+      "entry.226695464": formData.name,
+      "entry.410185675": formData.phone,
+      "entry.700388645": formData.address,
+      "entry.1382095200": orderDetails,
+      "entry.557539628": formData.comment,
+      "entry.597298013": `${total} ₴`
     });
 
     try {
