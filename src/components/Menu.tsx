@@ -8,8 +8,8 @@ const menuItems: MenuItemType[] = [
   {
     id: 1,
     name: "Філадельфія",
-    description: "Лосось, вершковий сир, авокадо, огірок",
-    price: 189,
+    description: "Рис, норі, лосось, вершковий сир, огірок",
+    price: 219,
     image: sushiRollImage,
     category: "rolls"
   },
