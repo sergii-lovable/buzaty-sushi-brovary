@@ -101,11 +101,11 @@ const Menu = ({ onAddToCart }: MenuProps) => {
     : menuItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section className="container py-16">
+    <section id="menu" className="container py-16" aria-label="Меню суші">
       <h2 className="text-4xl font-bold text-center mb-12">Наше меню</h2>
       
       <Tabs defaultValue="all" className="w-full" onValueChange={setSelectedCategory}>
-        <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-8">
+        <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-8" role="tablist" aria-label="Категорії меню">
           <TabsTrigger value="all">Всі</TabsTrigger>
           <TabsTrigger value="rolls">Роли</TabsTrigger>
           <TabsTrigger value="sets">Сети</TabsTrigger>
@@ -113,7 +113,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
         </TabsList>
 
         <TabsContent value={selectedCategory} className="mt-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
             {filteredItems.map(item => (
               <MenuItem 
                 key={item.id} 

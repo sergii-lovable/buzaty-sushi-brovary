@@ -7,10 +7,15 @@ interface HeroProps {
 
 const Hero = ({ onOrderClick }: HeroProps) => {
   return (
-    <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section 
+      className="relative h-[600px] flex items-center justify-center overflow-hidden"
+      aria-label="Головний банер"
+    >
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
+        role="img"
+        aria-label="Фото суші"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
       </div>
@@ -27,6 +32,7 @@ const Hero = ({ onOrderClick }: HeroProps) => {
           size="lg" 
           className="text-lg px-8 py-6"
           onClick={onOrderClick}
+          aria-label="Перейти до меню та замовити"
         >
           Замовити зараз
         </Button>

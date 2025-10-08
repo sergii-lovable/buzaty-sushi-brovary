@@ -69,33 +69,46 @@ const Index = () => {
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header cartCount={cartCount} onCartClick={() => setIsCartOpen(true)} />
+    <>
+      <div className="min-h-screen flex flex-col">
+        <Header cartCount={cartCount} onCartClick={() => setIsCartOpen(true)} />
+        
+        <main className="flex-grow" role="main">
+          <Hero onOrderClick={scrollToMenu} />
+          <Menu onAddToCart={addToCart} />
+        </main>
+
+        <Footer />
+
+        <Cart
+          isOpen={isCartOpen}
+          onClose={() => setIsCartOpen(false)}
+          items={cartItems}
+          onUpdateQuantity={updateQuantity}
+          onRemove={removeFromCart}
+          onCheckout={handleCheckout}
+        />
+
+        <OrderForm
+          isOpen={isOrderFormOpen}
+          onClose={() => setIsOrderFormOpen(false)}
+          items={cartItems}
+          total={total}
+          onOrderComplete={handleOrderComplete}
+        />
+      </div>
       
-      <main className="flex-grow">
-        <Hero onOrderClick={scrollToMenu} />
-        <Menu onAddToCart={addToCart} />
-      </main>
-
-      <Footer />
-
-      <Cart
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        items={cartItems}
-        onUpdateQuantity={updateQuantity}
-        onRemove={removeFromCart}
-        onCheckout={handleCheckout}
-      />
-
-      <OrderForm
-        isOpen={isOrderFormOpen}
-        onClose={() => setIsOrderFormOpen(false)}
-        items={cartItems}
-        total={total}
-        onOrderComplete={handleOrderComplete}
-      />
-    </div>
+      {/* Hidden content for SEO - helps search engines understand the page */}
+      <div className="sr-only" aria-hidden="true">
+        <h1>Пузаті суші Бровари - Доставка суші та ролів</h1>
+        <p>
+          Замовляйте найсмачніші суші у Броварах з доставкою до дому. 
+          У нашому меню: роли Філадельфія, Каліфорнія, Дракон, сети та нігірі. 
+          Свіжі інгредієнти, швидка доставка за 60 хвилин. 
+          Працюємо щодня з 10:00 до 22:00.
+        </p>
+      </div>
+    </>
   );
 };
 
