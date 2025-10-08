@@ -16,9 +16,9 @@ const Hero = ({ onOrderClick }: HeroProps) => {
       </div>
       
       <div className="relative z-10 container text-center text-white">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+        <h2 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
           Найсмачніші суші у Броварах
-        </h1>
+        </h2>
         <p className="text-xl md:text-2xl mb-8 text-white/90">
           Свіжі інгредієнти • Швидка доставка • Унікальні смаки
         </p>

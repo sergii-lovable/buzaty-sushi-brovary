@@ -22,9 +22,8 @@ const MenuItem = ({ item, onAdd }: MenuItemProps) => {
       <div className="relative h-48 overflow-hidden">
         <img 
           src={item.image} 
-          alt={`${item.name} - ${item.description}`}
+          alt={item.name}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-          loading="lazy"
         />
       </div>
       
