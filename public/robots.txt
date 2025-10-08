@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://puzati.brovary.org/sitemap.xml
+Sitemap: https://puzatisushi.com.ua/sitemap.xml

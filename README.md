@@ -62,16 +62,16 @@ This project is built with:
 
 ## How can I deploy this project?
 
-### GitHub Pages (puzati.brovary.org)
+### GitHub Pages (puzatisushi.com.ua)
 
-This project is configured to deploy automatically to GitHub Pages at **puzati.brovary.org**.
+This project is configured to deploy automatically to GitHub Pages at **puzatisushi.com.ua**.
 
 #### Initial Setup (One-time)
 
 1. Go to your GitHub repository settings
 2. Navigate to **Settings** > **Pages**
 3. Under **Source**, select **GitHub Actions**
-4. Under **Custom domain**, enter `puzati.brovary.org` (if not already set)
+4. Under **Custom domain**, enter `puzatisushi.com.ua` (if not already set)
 5. Wait for DNS check to complete
 
 #### DNS Configuration
@@ -88,7 +88,7 @@ Make sure your DNS provider has the following records:
 
 **CNAME Record** (if using www subdomain):
 ```
-www.puzati.brovary.org CNAME <your-github-username>.github.io
+www.puzatisushi.com.ua CNAME <your-github-username>.github.io
 ```
 
 #### Automatic Deployment
