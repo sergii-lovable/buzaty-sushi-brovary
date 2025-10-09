@@ -135,6 +135,22 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
+    id: 5,
+    name: "Сет 'Фієста'",
+    description: "20 шт / 480 гр: Філадельфія 1/2, Каліфорнія з крабом в ікрі 1/2, Каліфорнія з тунцем теріякі 1/2, Лавв Чіз Торі 1/2, Макі вершковий лосось 1/2",
+    price: 319,
+    image: sushiRollImage,
+    category: "sets"
+  },
+  {
+    id: 5,
+    name: "Сет 'Запечений'",
+    description: "24 шт / 740 гр: Запечений Філадельфія, Запечений з мідіями і беконом, Запечений Чікен",
+    price: 399,
+    image: sushiRollImage,
+    category: "sets"
+  },
+  {
     id: 6,
     name: "Сет 'Популярний'",
     description: "32 шт / 820 г: Філадельфія, Осака, Каліфорнія з тунцем теріякі, Макі вершковий лосось",
@@ -143,10 +159,42 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
+    id: 5,
+    name: "Сет 'Філадельфія Плюс'",
+    description: "26 шт / 800 гр: Філадельфія з лососем с/с, Лава Чіз Торі, Канада, Крім-суші з лососем 2шт",
+    price: 569,
+    image: sushiRollImage,
+    category: "sets"
+  },
+  {
+    id: 5,
+    name: "Сет 'Фішка'",
+    description: "32 шт / 920 гр: Філадельфія, Філадельфія Грін, Каліфорнія з беконом, Норвезький",
+    price: 619,
+    image: sushiRollImage,
+    category: "sets"
+  },
+  {
     id: 7,
     name: "Сет 'Хіт Сет'",
     description: "32 шт /900 г: Чіз рол з креветкою, Філадельфія з беконом, Ніжність, Макі авокадо",
     price: 639,
+    image: sushiRollImage,
+    category: "sets"
+  },
+  {
+    id: 7,
+    name: "Сет 'Комбі Сет'",
+    description: "32 шт /1 кг: Філадельфія 50/50, Ніжність, Запечений Чікен, Запечений з лососем 1/2, Запечений з тунцем теріякі 1/2",
+    price: 649,
+    image: sushiRollImage,
+    category: "sets"
+  },
+  {
+    id: 7,
+    name: "Сет 'Комбі Сет'",
+    description: "32 шт /1 кг: Філадельфія 50/50, Ніжність, Запечений Чікен, Запечений з лососем 1/2, Запечений з тунцем теріякі 1/2",
+    price: 649,
     image: sushiRollImage,
     category: "sets"
   },
