@@ -118,6 +118,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="rolls">Роли</TabsTrigger>
           <TabsTrigger value="sets">Сети</TabsTrigger>
           <TabsTrigger value="nigiri">Запечені роли</TabsTrigger>
+          <TabsTrigger value="salat">Салат</TabsTrigger>
         </TabsList>
 
         <TabsContent value={selectedCategory} className="mt-6">
