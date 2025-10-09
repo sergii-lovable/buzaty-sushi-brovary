@@ -22,6 +22,86 @@ const menuItems: MenuItemType[] = [
     category: "rolls"
   },
   {
+    id: 1,
+    name: "Філадельфія з лососем та креветкою",
+    description: "Лосось, креветка, крем-сир, авокадо, рис, норі",
+    price: 309,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія з лососем слабосоленим",
+    description: "Лосось с/с, крем-сир, огірок, ікра масаго, рис, норі",
+    price: 239,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія Дабл з лососем",
+    description: "Лосось - подвійна порція, крем-сир, авокадо, рис, норі",
+    price: 349,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія Грін",
+    description: "Водорості, горіховий соус, кунжут, крем-сир, огірок, рис, норі",
+    price: 189,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія з беконом",
+    description: "Бекон, крем-сир, помідор, рис, норі",
+    price: 189,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія з авокадо",
+    description: "Авокадо, лосось, крем-сир, огірок, унагі соус, рис, норі",
+    price: 209,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія з тунцем",
+    description: "Тунець, крем-сир, огірок, ікра масаго, рис, норі",
+    price: 199,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія з лососем і тунцем",
+    description: "Лосось, тунець, крем-сир, авокадо, ікра масаго, рис, норі",
+    price: 309,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія 50/50",
+    description: "Лосось, вугор, крем-сир, огірок, унагі соус, рис, норі",
+    price: 259,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
+    id: 1,
+    name: "Філадельфія з вугрем",
+    description: "Вугор, крем-сир, огірок, унагі соус, кунжут, рис, норі",
+    price: 249,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
     id: 2,
     name: "Каліфорнія з креветкою в кунжуті",
     description: "Креветка, авокадо, майонез, рис, норі, кунжут",
