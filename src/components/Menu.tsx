@@ -14,6 +14,14 @@ const menuItems: MenuItemType[] = [
     category: "rolls"
   },
   {
+    id: 1,
+    name: "Філадельфія Люкс",
+    description: "Лосось, крем-сир, авокадо, ікра масаго, рис, норі",
+    price: 249,
+    image: sushiRollImage,
+    category: "rolls"
+  },
+  {
     id: 2,
     name: "Каліфорнія з креветкою в кунжуті",
     description: "Креветка, авокадо, майонез, рис, норі, кунжут",
