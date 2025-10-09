@@ -81,9 +81,9 @@ const menuItems: MenuItemType[] = [
   },
   {
     id: 10,
-    name: "Нігірі вугор",
-    description: "2 шт копченого вугра на рисі",
-    price: 99,
+    name: "Запечений з мідіями і беконом",
+    description: "Мідії копчені, бекон, тамаго, унагі соус, рис, норі, кунжут, сирний соус",
+    price: 199,
     image: sushiRollImage,
     category: "nigiri"
   },
