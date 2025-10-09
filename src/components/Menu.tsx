@@ -239,7 +239,140 @@ const menuItems: MenuItemType[] = [
     price: 129,
     image: sushiRollImage,
     category: "salat"
-  }, 
+  },
+  // Сашимі
+  {
+    id: 30,
+    name: "Сашимі з лосося",
+    description: "8 шт свіжого філе лосося, імбир, васабі, соєвий соус",
+    price: 199,
+    image: sushiRollImage,
+    category: "sashimi"
+  },
+  {
+    id: 31,
+    name: "Сашимі з тунця",
+    description: "8 шт свіжого філе тунця, імбир, васабі, соєвий соус",
+    price: 219,
+    image: sushiRollImage,
+    category: "sashimi"
+  },
+  {
+    id: 32,
+    name: "Сашимі Мікс",
+    description: "12 шт асорті: лосось, тунець, вугор, імбир, васабі",
+    price: 329,
+    image: sushiRollImage,
+    category: "sashimi"
+  },
+  // Нігірі
+  {
+    id: 33,
+    name: "Нігірі з лососем",
+    description: "2 шт свіжого лосося на рисі з васабі",
+    price: 89,
+    image: sushiRollImage,
+    category: "nigiri-sushi"
+  },
+  {
+    id: 34,
+    name: "Нігірі з тунцем",
+    description: "2 шт свіжого тунця на рисі з васабі",
+    price: 95,
+    image: sushiRollImage,
+    category: "nigiri-sushi"
+  },
+  {
+    id: 35,
+    name: "Нігірі з вугрем",
+    description: "2 шт копченого вугра на рисі з унагі соусом",
+    price: 99,
+    image: sushiRollImage,
+    category: "nigiri-sushi"
+  },
+  {
+    id: 36,
+    name: "Нігірі з креветкою",
+    description: "2 шт тигрової креветки на рисі",
+    price: 85,
+    image: sushiRollImage,
+    category: "nigiri-sushi"
+  },
+  // Гункани
+  {
+    id: 37,
+    name: "Гункан з ікрою лосося",
+    description: "Рис в норі з ікрою лосося",
+    price: 79,
+    image: sushiRollImage,
+    category: "gunkan"
+  },
+  {
+    id: 38,
+    name: "Гункан з ікрою масаго",
+    description: "Рис в норі з ікрою масаго та спайсі соусом",
+    price: 69,
+    image: sushiRollImage,
+    category: "gunkan"
+  },
+  {
+    id: 39,
+    name: "Гункан з тунцем",
+    description: "Рис в норі з тунцем та спайсі майонезом",
+    price: 75,
+    image: sushiRollImage,
+    category: "gunkan"
+  },
+  // Супи
+  {
+    id: 40,
+    name: "Місо суп",
+    description: "Традиційний японський суп з місо пастою, тофу, водорості вакаме",
+    price: 79,
+    image: sushiRollImage,
+    category: "soup"
+  },
+  {
+    id: 41,
+    name: "Том Ям з креветками",
+    description: "Гострий тайський суп з креветками, грибами, томатами",
+    price: 139,
+    image: sushiRollImage,
+    category: "soup"
+  },
+  {
+    id: 42,
+    name: "Рамен з куркою",
+    description: "Японська локшина в курячому бульйоні з яйцем та овочами",
+    price: 149,
+    image: sushiRollImage,
+    category: "soup"
+  },
+  // Напої
+  {
+    id: 43,
+    name: "Coca-Cola 0.33л",
+    description: "Класична кола в банці",
+    price: 35,
+    image: sushiRollImage,
+    category: "drinks"
+  },
+  {
+    id: 44,
+    name: "Зелений чай",
+    description: "Гарячий японський зелений чай",
+    price: 25,
+    image: sushiRollImage,
+    category: "drinks"
+  },
+  {
+    id: 45,
+    name: "Лимонад домашній",
+    description: "Освіжаючий лимонад власного приготування 0.5л",
+    price: 55,
+    image: sushiRollImage,
+    category: "drinks"
+  },
 ];
 
 interface MenuProps {
@@ -258,12 +391,17 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       <h2 className="text-4xl font-bold text-center mb-12">Наше меню</h2>
       
       <Tabs defaultValue="all" className="w-full" onValueChange={setSelectedCategory}>
-        <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-8" role="tablist" aria-label="Категорії меню">
+        <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-5 mb-8" role="tablist" aria-label="Категорії меню">
           <TabsTrigger value="all">Всі</TabsTrigger>
           <TabsTrigger value="rolls">Роли</TabsTrigger>
           <TabsTrigger value="sets">Сети</TabsTrigger>
-          <TabsTrigger value="nigiri">Запечені роли</TabsTrigger>
+          <TabsTrigger value="nigiri">Запечені</TabsTrigger>
           <TabsTrigger value="salat">Салат</TabsTrigger>
+          <TabsTrigger value="sashimi">Сашимі</TabsTrigger>
+          <TabsTrigger value="nigiri-sushi">Нігірі</TabsTrigger>
+          <TabsTrigger value="gunkan">Гункани</TabsTrigger>
+          <TabsTrigger value="soup">Супи</TabsTrigger>
+          <TabsTrigger value="drinks">Напої</TabsTrigger>
         </TabsList>
 
         <TabsContent value={selectedCategory} className="mt-6">
