@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import sushiRollImage from "@/assets/sushi-roll.jpg";
 
 const menuItems: MenuItemType[] = [
-  // РОЛИ
+  // Роли
   {
     id: 1,
     name: "Філадельфія",
