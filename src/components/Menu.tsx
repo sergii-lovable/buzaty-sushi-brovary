@@ -23,9 +23,9 @@ const menuItems: MenuItemType[] = [
   },
   {
     id: 3,
-    name: "Дракон",
-    description: "Вугор, авокадо, огірок, унагі соус",
-    price: 215,
+    name: "Канада",
+    description: "Вугор, крем-сир, огірок, тамаго, краб-кейк, кунжут, рис, норі, унагі соус",
+    price: 209,
     image: sushiRollImage,
     category: "rolls"
   },
