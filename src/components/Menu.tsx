@@ -95,6 +95,15 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "nigiri"
   },
+ // Салат
+  {
+    id: 8,
+    name: "Запечений з лососем",
+    description: "Лосось, огірок, тамаго, ікра масаго, рис, норі, унагі соус, кунжут, сирний соус",
+    price: 229,
+    image: sushiRollImage,
+    category: "salat"
+  }, 
 ];
 
 interface MenuProps {
