@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import sushiRollImage from "@/assets/sushi-roll.jpg";
 
 const menuItems: MenuItemType[] = [
-  // Роли
+  // РОЛИ
   {
     id: 1,
     name: "Філадельфія",
@@ -48,21 +48,21 @@ const menuItems: MenuItemType[] = [
   },
   {
     id: 6,
-    name: "Сет 'Премія'",
-    description: "32 шт: міх найкращих ролів з лососем і тунцем",
-    price: 699,
+    name: "Сет 'Популярний'",
+    description: "32 шт / 820 г: Філадельфія, Осака, Каліфорнія з тунцем теріякі, Макі вершковий лосось",
+    price: 549,
     image: sushiRollImage,
     category: "sets"
   },
   {
     id: 7,
-    name: "Сет 'Веган'",
-    description: "24 шт: роли з авокадо, огірком, тофу",
-    price: 399,
+    name: "Сет 'Хіт Сет'",
+    description: "32 шт /900 г: Чіз рол з креветкою, Філадельфія з беконом, Ніжність, Макі авокадо",
+    price: 639,
     image: sushiRollImage,
     category: "sets"
   },
-  // Нігірі
+  // ФУТО-МАКІ
   {
     id: 8,
     name: "Нігірі лосось",
