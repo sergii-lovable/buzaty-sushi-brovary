@@ -8,16 +8,16 @@ const menuItems: MenuItemType[] = [
   {
     id: 1,
     name: "Філадельфія",
-    description: "Рис, норі, лосось, вершковий сир, огірок",
+    description: "Лосось, крем-сир, огірок, рис, норі",
     price: 219,
     image: sushiRollImage,
     category: "rolls"
   },
   {
     id: 2,
-    name: "Каліфорнія",
-    description: "Краб, авокадо, огірок, ікра тобіко",
-    price: 165,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
     image: sushiRollImage,
     category: "rolls"
   },
