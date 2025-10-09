@@ -73,9 +73,9 @@ const menuItems: MenuItemType[] = [
   },
   {
     id: 9,
-    name: "Нігірі тунець",
-    description: "2 шт свіжого тунця на рисі",
-    price: 95,
+    name: "Запечений Чікен",
+    description: "Курка теріякі, крем-сир, тамаго, ананас, унагі соус, кунжут, рис, норі, сирний соус",
+    price: 189,
     image: sushiRollImage,
     category: "nigiri"
   },
