@@ -25,7 +25,7 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
                 <address className="not-italic" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                  <span itemProp="addressLocality">м. Бровари</span>
+                  <span itemProp="addressLocality">м. Бровари, вул. Грушевського 7</span>
                 </address>
               </div>
             </div>
@@ -45,7 +45,7 @@ const Footer = () => {
                 <meta itemProp="dayOfWeek" content="Sunday" />
                 <meta itemProp="opens" content="11:00" />
                 <meta itemProp="closes" content="22:00" />
-                <p>Пн-Нд: 11:00 - 22:00</p>
+                <p>Пн-Нд: 10:00 - 21:00</p>
                 <p className="text-sm mt-1">Доставка по Броварах</p>
               </div>
             </div>
