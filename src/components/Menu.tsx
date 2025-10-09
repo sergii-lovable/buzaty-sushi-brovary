@@ -109,7 +109,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="all">Всі</TabsTrigger>
           <TabsTrigger value="rolls">Роли</TabsTrigger>
           <TabsTrigger value="sets">Сети</TabsTrigger>
-          <TabsTrigger value="nigiri">Нігірі</TabsTrigger>
+          <TabsTrigger value="nigiri">Запечені роли</TabsTrigger>
         </TabsList>
 
         <TabsContent value={selectedCategory} className="mt-6">
