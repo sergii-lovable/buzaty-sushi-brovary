@@ -31,18 +31,18 @@ const menuItems: MenuItemType[] = [
   },
   {
     id: 4,
-    name: "Спайсі тунець",
-    description: "Тунець, спайсі соус, огірок, кунжут",
-    price: 175,
+    name: "Філадельфія з тунцем",
+    description: "Тунець, крем-сир, огірок, рис, норі, ікра масаго",
+    price: 199,
     image: sushiRollImage,
     category: "rolls"
   },
   // Сети
   {
     id: 5,
-    name: "Сет 'Пузатий'",
-    description: "24 шт: Філадельфія, Каліфорнія, Дракон",
-    price: 499,
+    name: "Сет 'Суші Мікс'",
+    description: "20 шт / 405 гр: Філадельфія 1/2, Каліфорнія з лососем в ікрі 1/2, Каліфорнія з крабом в кунжуті 1/2, Макі огірок",
+    price: 319,
     image: sushiRollImage,
     category: "sets"
   },
