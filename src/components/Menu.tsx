@@ -62,12 +62,12 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "sets"
   },
-  // ФУТО-МАКІ
+  // Запечені
   {
     id: 8,
-    name: "Нігірі лосось",
-    description: "2 шт свіжого лосося на рисі",
-    price: 89,
+    name: "Запечений з лососем",
+    description: "Лосось, огірок, тамаго, ікра масаго, рис, норі, унагі соус, кунжут, сирний соус",
+    price: 229,
     image: sushiRollImage,
     category: "nigiri"
   },
