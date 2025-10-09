@@ -98,9 +98,9 @@ const menuItems: MenuItemType[] = [
  // Салат
   {
     id: 8,
-    name: "Запечений з лососем",
-    description: "Лосось, огірок, тамаго, ікра масаго, рис, норі, унагі соус, кунжут, сирний соус",
-    price: 229,
+    name: "Салат Чука",
+    description: "Класичний японський салат із водоростей з горіховим соусом",
+    price: 129,
     image: sushiRollImage,
     category: "salat"
   }, 
