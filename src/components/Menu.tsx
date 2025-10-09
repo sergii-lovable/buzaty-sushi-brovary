@@ -240,7 +240,7 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "salat"
   },
-  // Сашимі
+  // Каліфорнія меню
   {
     id: 30,
     name: "Сашимі з лосося",
@@ -265,7 +265,7 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "sashimi"
   },
-  // Нігірі
+  // Чіз роли
   {
     id: 33,
     name: "Нігірі з лососем",
@@ -298,7 +298,7 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "nigiri-sushi"
   },
-  // Гункани
+  // Оригінальні
   {
     id: 37,
     name: "Гункан з ікрою лосося",
@@ -323,7 +323,7 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "gunkan"
   },
-  // Супи
+  // Футо-макі
   {
     id: 40,
     name: "Місо суп",
@@ -402,6 +402,8 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="gunkan">Гункани</TabsTrigger>
           <TabsTrigger value="soup">Супи</TabsTrigger>
           <TabsTrigger value="drinks">Напої</TabsTrigger>
+          <TabsTrigger value="minirolls">Міні роли / Макі</TabsTrigger>
+          <TabsTrigger value="krimsushi">Суші та крім-суші</TabsTrigger>
         </TabsList>
 
         <TabsContent value={selectedCategory} className="mt-6">
