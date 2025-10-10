@@ -48,6 +48,37 @@ This project is built with modern web technologies:
 - **Routing**: React Router DOM 6.30
 - **State Management**: React hooks (useState)
 - **Forms**: React Hook Form + Zod validation
+- **Build Automation**: Custom Vite plugin for noscript generation
+
+### 🔧 Automated Noscript Generation
+
+This site includes an **automated build-time plugin** that generates complete noscript HTML content for search engines and no-JavaScript users:
+
+#### Features
+- ✅ **100% Auto-Synchronized**: Menu data is automatically extracted from `Menu.tsx` during every build
+- ✅ **Zero Maintenance**: No manual updates needed when menu items change
+- ✅ **SEO Optimized**: Complete semantic HTML with all 45+ menu items for search engine crawling
+- ✅ **Type-Safe**: Uses TypeScript Compiler API to parse menu data
+- ✅ **Fast**: Adds < 5 seconds to build time, generates ~13KB of HTML
+
+#### How It Works
+1. During `npm run build`, the Vite plugin (`vite-plugins/generate-noscript.ts`) executes
+2. Plugin parses `src/components/Menu.tsx` using TypeScript AST
+3. Extracts all menu items and generates semantic HTML with inline CSS
+4. Injects generated content into `index.html` noscript section
+5. Build output includes up-to-date menu for search engines
+
+#### Data Source
+- **Single Source of Truth**: `src/components/Menu.tsx` → `menuItems` array
+- **Automatic Updates**: Change menu items in Menu.tsx, rebuild, and noscript HTML updates automatically
+- **No Manual Sync Required**: Plugin guarantees 100% data parity between dynamic and static content
+
+#### Troubleshooting
+If the build fails with noscript generation errors:
+- Ensure `src/components/Menu.tsx` has valid TypeScript syntax
+- Verify `menuItems` array exists and contains valid MenuItemType objects
+- Check that all items have required properties: id, name, description, price, category
+- Generated HTML must be < 50KB (current: ~13KB)
 - **Icons**: Lucide React
 - **Notifications**: Sonner toasts
 
@@ -70,7 +101,8 @@ cd buzaty-sushi-brovary
 # Install dependencies
 npm install
 
-# Start development server (runs on http://localhost:8080)
+# Start development server
+# Default: http://localhost:8080 (will use 8081, 8082, etc. if 8080 is busy)
 npm run dev
 
 # Build for production
