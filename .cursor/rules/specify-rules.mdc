@@ -4,6 +4,8 @@ Auto-generated from all feature plans. Last updated: 2025-10-10
 
 ## Active Technologies
 - TypeScript 5.x (development), HTML5 (output) + Vite (build tool), React (application framework) (002-create-up-to)
+- TypeScript 5.x (development), HTML5 (output), Node.js (build scripts) + Vite (build tool), React (application framework), Vite Plugin API (for automation), TypeScript Compiler API (for AST parsing) (002-create-up-to)
+- N/A (static HTML content generated at build time) (002-create-up-to)
 
 ## Project Structure
 ```
@@ -19,6 +21,7 @@ npm test [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNO
 TypeScript 5.x (development), HTML5 (output): Follow standard conventions
 
 ## Recent Changes
+- 002-create-up-to: Added TypeScript 5.x (development), HTML5 (output), Node.js (build scripts) + Vite (build tool), React (application framework), Vite Plugin API (for automation), TypeScript Compiler API (for AST parsing)
 - 002-create-up-to: Added TypeScript 5.x (development), HTML5 (output) + Vite (build tool), React (application framework)
 
 <!-- MANUAL ADDITIONS START -->

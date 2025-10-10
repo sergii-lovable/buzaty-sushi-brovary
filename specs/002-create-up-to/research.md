@@ -159,17 +159,33 @@ This document consolidates research findings for implementing an up-to-date nosc
 2. **Build-time generation**: Create Vite plugin to generate noscript from Menu.tsx during build
 3. **Script-based generation**: Node.js script to extract data and update index.html
 
-**Decision**: Manual update for initial implementation (documented in plan.md and assumptions).
+**Decision**: **Build-time generation via Vite plugin** (automated approach).
 
 **Rationale**: 
-- Menu updates are infrequent (weeks/months between changes)
-- Manual process is simplest and requires no new tooling
-- Risk of staleness is acceptable given update frequency
-- Future enhancement: automate if menu update frequency increases
+- **Eliminates maintenance overhead**: No manual synchronization required, reducing human error
+- **Guarantees data parity**: 100% consistency between Menu.tsx and noscript content on every build
+- **Prevents stale deployments**: Impossible to deploy outdated noscript data
+- **Integrates seamlessly**: Vite plugin hooks into existing build process without extra commands
+- **Type-safe extraction**: Leverages TypeScript Compiler API to parse Menu.tsx AST and extract typed data
+- **Minimal complexity**: Single-purpose plugin (~200 lines) following Vite conventions
+- **Zero ongoing maintenance**: After initial implementation, requires no further updates
 
-**Alternatives considered**:
-- **Build plugin**: Over-engineering for current needs, adds complexity to build process
-- **Script**: Better than manual but still requires running extra commands, adds maintenance
+**Implementation Approach**:
+- Create `vite-plugins/generate-noscript.ts` plugin
+- Use TypeScript Compiler API (`ts.createSourceFile`, `ts.forEachChild`) to parse Menu.tsx
+- Find and extract `menuItems` array constant from AST
+- Transform MenuItemType objects to semantic HTML strings
+- Inject generated HTML into index.html during `transformIndexHtml` hook
+- Add build-time validation to ensure HTML output is well-formed
+
+**Alternatives considered and rejected**:
+- **Manual update**: High risk of staleness, human error prone, ongoing maintenance burden
+- **Script**: Requires remembering to run script before each build, doesn't guarantee synchronization
+- **Runtime generation**: Would impact performance and violate Constitution Principle I (Performance First)
+
+**Technical Dependencies**:
+- TypeScript Compiler API (already available via `typescript` package dependency)
+- Vite Plugin API (built into Vite, no additional dependencies)
 
 ---
 
@@ -204,18 +220,41 @@ This document consolidates research findings for implementing an up-to-date nosc
 2. **HTML Structure**: Semantic HTML5 with header/main/footer, h1-h3 hierarchy, ul/li lists
 3. **Styling**: Minimal inline CSS for readability and mobile responsiveness
 4. **Category Display**: Show only categories with items, ordered by importance
-5. **Synchronization**: Manual update process, documented as technical debt
-6. **Validation**: W3C validator + Lighthouse + Google Rich Results Test + manual browser testing
+5. **Synchronization**: **Automated via Vite build plugin** - eliminates manual updates and technical debt
+6. **Validation**: W3C validator + Lighthouse + Google Rich Results Test + automated build verification + manual browser testing
 
 ### Size Estimate
 
 - 45 menu items × ~120 chars each = ~5,400 chars
 - HTML structure overhead: ~1,000 chars
-- Total estimated size: ~6.5KB (well under 50KB constraint)
+- Plugin code: ~200 lines TypeScript
+- Total estimated size: ~6.5KB for HTML output (well under 50KB constraint)
+
+### Automation Architecture
+
+**Vite Plugin Flow**:
+```
+Build Start
+    ↓
+Plugin: transformIndexHtml hook triggered
+    ↓
+Read & Parse src/components/Menu.tsx using ts.CompilerAPI
+    ↓
+Extract menuItems array from AST
+    ↓
+Transform MenuItemType[] → Semantic HTML string
+    ↓
+Inject HTML into index.html noscript section
+    ↓
+Validate generated HTML (well-formed, size constraints)
+    ↓
+Build Complete (HTML includes up-to-date noscript)
+```
 
 ### Next Steps (Phase 1)
 
-1. Generate data-model.md documenting menu item structure
-2. Create quickstart.md with validation testing instructions
+1. Generate data-model.md documenting menu item structure and plugin architecture
+2. Create quickstart.md with validation testing instructions (including build verification)
 3. Update agent context with this feature
+4. Document Vite plugin API integration in contracts/
 

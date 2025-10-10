@@ -9,14 +9,75 @@ This guide provides step-by-step instructions for testing and validating the upd
 
 ## Prerequisites
 
-- ✅ `index.html` has been updated with complete menu content in noscript section
+- ✅ Vite plugin `generate-noscript.ts` has been implemented
+- ✅ Plugin is registered in `vite.config.ts`
 - ✅ Development server is running (`npm run dev` or `bun dev`)
+- ✅ Build completes successfully (`npm run build` or `bun run build`)
 - ✅ Chrome or Firefox browser installed
 - ✅ Internet connection (for online validation tools)
 
 ---
 
 ## Testing Checklist
+
+### ✅ Step 0: Build Verification (Automated Plugin)
+
+**Purpose**: Verify the Vite plugin successfully generates noscript content during build
+
+**Instructions**:
+
+1. **Clean previous build**:
+   ```bash
+   # From repo root
+   rm -rf dist
+   ```
+
+2. **Run production build**:
+   ```bash
+   npm run build
+   # or
+   bun run build
+   ```
+
+3. **Check build output**:
+   - [ ] Build completes without errors
+   - [ ] No plugin errors in console output
+   - [ ] Build time increase is < 5 seconds compared to baseline
+
+4. **Inspect generated HTML**:
+   ```bash
+   # View the noscript section in built HTML
+   grep -A 50 "<noscript>" dist/index.html
+   ```
+   
+   - [ ] Noscript section is present
+   - [ ] Contains menu categories (Роли, Сети, etc.)
+   - [ ] Contains menu items with prices
+   - [ ] HTML structure looks well-formed
+
+5. **Verify content completeness**:
+   ```bash
+   # Count menu items in generated HTML
+   grep -c "<li><strong>" dist/index.html
+   ```
+   - [ ] Count should be 45 (matching Menu.tsx items)
+
+6. **Test menu modification**:
+   - Edit `src/components/Menu.tsx` - change one item's price
+   - Rebuild: `npm run build`
+   - Check `dist/index.html` noscript section
+   - [ ] Modified price appears in built HTML (confirms automation works)
+   - Revert the test change in Menu.tsx
+
+**Expected Result**: Build completes successfully, dist/index.html contains complete noscript content with all 45 menu items and updated data from Menu.tsx.
+
+**Troubleshooting**:
+- If build fails with "Menu.tsx not found": Check plugin is reading correct file path
+- If build fails with "menuItems not found": Verify Menu.tsx exports menuItems constant
+- If HTML is incomplete: Check plugin's category filtering logic
+- If prices don't update: Verify plugin is parsing Menu.tsx correctly (not cached)
+
+---
 
 ### ✅ Step 1: Visual Verification (No JavaScript)
 

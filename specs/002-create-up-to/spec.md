@@ -115,11 +115,13 @@ The website maintains or improves its search engine rankings and rich snippet ap
 
 ## Assumptions
 
-- The menu data source (Menu.tsx menuItems array) is the single source of truth; noscript content will be generated from or manually synchronized with this data
-- Menu updates occur infrequently enough that manual or semi-automated noscript content updates are feasible (no real-time menu API integration required)
+- The menu data source (Menu.tsx menuItems array) is the single source of truth; noscript content will be automatically generated from this data at build time using a Vite plugin
+- The site is deployed to GitHub Pages (static hosting); build process runs locally or in CI/CD before deployment, not on GitHub Pages servers
+- Noscript generation happens during `npm run build` producing static HTML; no server-side processing or Node.js runtime required in production
 - Search engines will recrawl the site within 7 days of deployment; no immediate reindexing request is needed
 - Users without JavaScript represent less than 1% of human traffic but search bots make up a significant portion of no-JS visitors
 - The existing JSON-LD structured data (Restaurant, LocalBusiness schemas) will remain in the HTML head; noscript content complements but doesn't replace structured data
 - Inline CSS in noscript is acceptable for basic styling; pixel-perfect design match with the dynamic site is not required
 - Noscript content does not need interactive features (filters, add to cart); it serves as a read-only information display
 - The noscript section will be placed immediately inside the body tag before the #root div, ensuring search bots encounter content before encountering the empty React mount point
+- Build-time generation is compatible with GitHub Pages static hosting; automated synchronization eliminates manual update overhead

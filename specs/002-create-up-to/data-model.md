@@ -144,42 +144,76 @@ export interface MenuItemType {
 ## Data Flow
 
 ```
-Menu.tsx menuItems array (TypeScript)
+Build Process Start
     ↓
-[Manual Extraction Process]
+Vite Plugin: generate-noscript.ts
     ↓
-Grouped by category → Sorted by id
+Read src/components/Menu.tsx
     ↓
-HTML Template Application
+Parse TypeScript AST (ts.createSourceFile)
     ↓
-index.html noscript section (HTML)
+Extract menuItems array (walk AST nodes)
+    ↓
+Validate MenuItemType[] structure
+    ↓
+Group by category → Sort by id
+    ↓
+Apply HTML template to each item
+    ↓
+Generate semantic HTML string
+    ↓
+Inject into index.html noscript section
+    ↓
+Build Output: dist/index.html
     ↓
 [Browser / Search Engine Crawler]
 ```
 
+### Automated Extraction Process
+
+The Vite plugin (`vite-plugins/generate-noscript.ts`) performs the following steps:
+
+1. **AST Parsing**: Use `ts.createSourceFile()` to parse Menu.tsx into an Abstract Syntax Tree
+2. **Node Traversal**: Walk the AST using `ts.forEachChild()` to find the `menuItems` variable declaration
+3. **Data Extraction**: Extract the array literal expression containing menu item objects
+4. **Type Validation**: Verify each object has required properties (id, name, description, price, category)
+5. **Transformation**: Convert TypeScript objects to HTML strings using template functions
+6. **Injection**: Replace noscript placeholder in index.html with generated content during `transformIndexHtml` hook
+
 ## Data Integrity
 
-**Consistency Requirements**:
-- Every item in Menu.tsx menuItems MUST appear in noscript
-- Name, description, and price MUST match exactly (100% parity)
-- Category groupings MUST match the dynamic menu structure
+**Consistency Requirements** (Automatically Enforced):
+- Every item in Menu.tsx menuItems AUTOMATICALLY appears in noscript (enforced by build plugin)
+- Name, description, and price AUTOMATICALLY match exactly (100% parity guaranteed)
+- Category groupings AUTOMATICALLY match the dynamic menu structure
 
-**Verification Process**:
-1. Count items in noscript vs Menu.tsx (should be 45)
-2. Spot-check 5 random items for name/description/price accuracy
-3. Verify all 10 categories are present with correct Ukrainian names
+**Automated Verification** (Build-Time):
+1. Plugin parses Menu.tsx and extracts all items (build fails if parsing errors)
+2. Plugin validates each item has required properties (build fails if missing data)
+3. Plugin generates HTML with all items (guaranteed complete by design)
+4. Plugin verifies HTML size < 50KB (build fails if constraint violated)
+5. Plugin validates HTML is well-formed (build fails if invalid structure)
 
-**Update Triggers**:
-- When a new menu item is added to Menu.tsx
-- When an existing item's name, description, or price changes
-- When a menu item is removed from Menu.tsx
+**Update Triggers** (Automatic):
+- **Automatic**: When a new menu item is added to Menu.tsx → next build regenerates noscript
+- **Automatic**: When an existing item's name, description, or price changes → next build reflects changes
+- **Automatic**: When a menu item is removed from Menu.tsx → next build removes from noscript
+- **Zero manual intervention required**
+
+**Build Failures** (Protection Against Errors):
+- Plugin fails build if Menu.tsx has syntax errors
+- Plugin fails build if menuItems array is not found or malformed
+- Plugin fails build if any item is missing required properties
+- Plugin fails build if generated HTML exceeds size constraints
+- Build failures prevent deployment of stale or invalid content
 
 ---
 
 ## Notes
 
-- No database or API integration required (static data)
-- No validation logic needed (data is pre-validated in TypeScript)
-- Manual synchronization creates risk of staleness (documented in plan.md)
-- Future enhancement: automated extraction and HTML generation
+- No database or API integration required (static data generated at build time)
+- No manual validation needed (automated via plugin at every build)
+- **No risk of staleness** - automated synchronization eliminates human error
+- Plugin code is testable independently of build process
+- TypeScript Compiler API ensures type-safe extraction
 
