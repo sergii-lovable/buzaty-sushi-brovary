@@ -1,0 +1,25 @@
+# buzaty-sushi-brovary Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2025-10-10
+
+## Active Technologies
+- TypeScript 5.x (development), HTML5 (output) + Vite (build tool), React (application framework) (002-create-up-to)
+
+## Project Structure
+```
+backend/
+frontend/
+tests/
+```
+
+## Commands
+npm test [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLOGIES] npm run lint
+
+## Code Style
+TypeScript 5.x (development), HTML5 (output): Follow standard conventions
+
+## Recent Changes
+- 002-create-up-to: Added TypeScript 5.x (development), HTML5 (output) + Vite (build tool), React (application framework)
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->
