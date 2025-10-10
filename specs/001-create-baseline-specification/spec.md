@@ -18,10 +18,12 @@ A customer visits the website to explore available sushi offerings and view deta
 **Acceptance Scenarios**:
 
 1. **Given** a customer lands on the homepage, **When** they scroll to the menu section, **Then** they see a tabbed interface with category filters (All, Rolls, Sets, Baked, Salad, Sashimi, Nigiri, Gunkan, Soups, Drinks, Mini Rolls, Sushi)
-2. **Given** the menu is displayed, **When** a customer selects a category tab, **Then** only items from that category are shown in a responsive grid layout
-3. **Given** a menu item is displayed, **When** a customer views it, **Then** they see the item name in Ukrainian, description with ingredients, price in UAH, and product image
-4. **Given** a customer is on a mobile device (320px-768px width), **When** they view the menu, **Then** items display in a single column with touch-friendly spacing and readable text
-5. **Given** a customer uses keyboard navigation, **When** they tab through categories, **Then** focus indicators are visible and all interactive elements are reachable
+2. **Given** the menu is displayed, **When** a customer views the category tabs on desktop (≥768px), **Then** category buttons are displayed in a horizontal grid with 5 categories per row, wrapping to multiple rows when there are more than 5 categories
+3. **Given** the menu is displayed, **When** a customer selects a category tab, **Then** only items from that category are shown in a responsive grid layout
+4. **Given** a menu item is displayed, **When** a customer views it, **Then** they see the item name in Ukrainian, description with ingredients, price in UAH, and product image
+5. **Given** a customer is on a mobile device (320px-768px width), **When** they view the menu, **Then** items display in a single column with touch-friendly spacing and readable text
+6. **Given** a customer is on a mobile device, **When** they view the category tabs, **Then** category buttons adapt to smaller screen width while maintaining usability and readability
+7. **Given** a customer uses keyboard navigation, **When** they tab through categories, **Then** focus indicators are visible and all interactive elements are reachable
 
 ---
 
@@ -102,32 +104,33 @@ A customer wants to find the restaurant's physical location, phone number, opera
 ### Functional Requirements
 
 - **FR-001**: System MUST display a comprehensive menu with 45+ items organized into 12 categories (Rolls, Sets, Baked, Salad, Sashimi, Nigiri, Gunkan, Soups, Drinks, Mini Rolls, Sushi, All)
-- **FR-002**: System MUST allow users to filter menu items by selecting category tabs, showing only items belonging to the selected category
-- **FR-003**: Each menu item MUST display name (Ukrainian), description with ingredient list, price in UAH, and product image
-- **FR-004**: System MUST provide an "Add to Cart" button on each menu item that adds the item to a persistent shopping cart
-- **FR-005**: Cart MUST automatically merge duplicate items by incrementing quantity instead of creating separate entries
-- **FR-006**: System MUST provide a cart sidebar accessible via header icon, showing all added items with quantity controls (+/-), individual prices, and running total
-- **FR-007**: Cart MUST calculate and display the total order price in real-time as items are added, removed, or quantities change
-- **FR-008**: System MUST preserve cart contents during the browsing session (sessionStorage or in-memory state)
-- **FR-009**: System MUST display a badge on the cart icon showing the total count of items in the cart
-- **FR-010**: System MUST provide a checkout button that opens an order form modal when cart contains at least one item
-- **FR-011**: Order form MUST collect required fields: customer name, phone number, delivery address
-- **FR-012**: Order form MUST collect optional field: order comment/special instructions
-- **FR-013**: System MUST validate required fields client-side before allowing form submission
-- **FR-014**: System MUST submit order data to Google Forms integration endpoint using POST request with form-encoded data
-- **FR-015**: System MUST display loading state during form submission and prevent duplicate submissions
-- **FR-016**: System MUST show success notification upon successful order submission and clear the cart
-- **FR-017**: System MUST show error notification if order submission fails and preserve cart data for retry
-- **FR-018**: System MUST display restaurant contact information in footer: address (м. Бровари, вул. Грушевського 7), phone (+38 077 172-07-07), operating hours (Пн-Нд: 10:00 - 21:00)
-- **FR-019**: System MUST provide a clickable phone number that triggers device dialer on mobile
-- **FR-020**: System MUST include SEO metadata: title, description, Open Graph tags, Twitter Cards, canonical URL, sitemap, robots.txt
-- **FR-021**: System MUST include JSON-LD structured data for Restaurant and LocalBusiness schemas with menu, address, hours, and geo-coordinates
-- **FR-022**: System MUST render without uncaught JavaScript errors in browser console
-- **FR-023**: System MUST provide keyboard navigation for all interactive elements (tabs, buttons, form fields) with visible focus indicators
-- **FR-024**: System MUST include semantic HTML with appropriate ARIA labels for screen reader accessibility
-- **FR-025**: System MUST be responsive and functional on viewport widths from 320px (mobile) to 2560px (large desktop)
-- **FR-026**: All user-facing text MUST be in Ukrainian language (uk-UA locale)
-- **FR-027**: System MUST include a noscript fallback with static menu content for search engines and users with JavaScript disabled
+- **FR-002**: System MUST display category tabs in a horizontal grid layout showing 5 categories per row on desktop viewports (≥768px), with automatic wrapping to additional rows when more than 5 categories are present
+- **FR-003**: System MUST allow users to filter menu items by selecting category tabs, showing only items belonging to the selected category
+- **FR-004**: Each menu item MUST display name (Ukrainian), description with ingredient list, price in UAH, and product image
+- **FR-005**: System MUST provide an "Add to Cart" button on each menu item that adds the item to a persistent shopping cart
+- **FR-006**: Cart MUST automatically merge duplicate items by incrementing quantity instead of creating separate entries
+- **FR-007**: System MUST provide a cart sidebar accessible via header icon, showing all added items with quantity controls (+/-), individual prices, and running total
+- **FR-008**: Cart MUST calculate and display the total order price in real-time as items are added, removed, or quantities change
+- **FR-009**: System MUST preserve cart contents during the browsing session (sessionStorage or in-memory state)
+- **FR-010**: System MUST display a badge on the cart icon showing the total count of items in the cart
+- **FR-011**: System MUST provide a checkout button that opens an order form modal when cart contains at least one item
+- **FR-012**: Order form MUST collect required fields: customer name, phone number, delivery address
+- **FR-013**: Order form MUST collect optional field: order comment/special instructions
+- **FR-014**: System MUST validate required fields client-side before allowing form submission
+- **FR-015**: System MUST submit order data to Google Forms integration endpoint using POST request with form-encoded data
+- **FR-016**: System MUST display loading state during form submission and prevent duplicate submissions
+- **FR-017**: System MUST show success notification upon successful order submission and clear the cart
+- **FR-018**: System MUST show error notification if order submission fails and preserve cart data for retry
+- **FR-019**: System MUST display restaurant contact information in footer: address (м. Бровари, вул. Грушевського 7), phone (+38 077 172-07-07), operating hours (Пн-Нд: 10:00 - 21:00)
+- **FR-020**: System MUST provide a clickable phone number that triggers device dialer on mobile
+- **FR-021**: System MUST include SEO metadata: title, description, Open Graph tags, Twitter Cards, canonical URL, sitemap, robots.txt
+- **FR-022**: System MUST include JSON-LD structured data for Restaurant and LocalBusiness schemas with menu, address, hours, and geo-coordinates
+- **FR-023**: System MUST render without uncaught JavaScript errors in browser console
+- **FR-024**: System MUST provide keyboard navigation for all interactive elements (tabs, buttons, form fields) with visible focus indicators
+- **FR-025**: System MUST include semantic HTML with appropriate ARIA labels for screen reader accessibility
+- **FR-026**: System MUST be responsive and functional on viewport widths from 320px (mobile) to 2560px (large desktop)
+- **FR-027**: All user-facing text MUST be in Ukrainian language (uk-UA locale)
+- **FR-028**: System MUST include a noscript fallback with static menu content for search engines and users with JavaScript disabled
 
 ### Key Entities
 

@@ -24,7 +24,7 @@
 - [x] Scope is clearly bounded
 - [x] Dependencies and assumptions identified
 
-**Notes**: All 27 functional requirements are specific and testable. Success criteria include concrete metrics (3 seconds load time, 95% success rate, etc.) without mentioning technical implementation. Assumptions section clearly documents constraints around Google Forms integration, payment handling, and delivery scope.
+**Notes**: All 28 functional requirements are specific and testable. Success criteria include concrete metrics (3 seconds load time, 95% success rate, etc.) without mentioning technical implementation. Assumptions section clearly documents constraints around Google Forms integration, payment handling, and delivery scope. FR-002 was added to document category tab layout behavior (5 categories per row with wrapping).
 
 ## Feature Readiness
 
