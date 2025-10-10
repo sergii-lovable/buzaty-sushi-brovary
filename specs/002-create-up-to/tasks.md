@@ -25,10 +25,10 @@
 
 **Purpose**: Project initialization and directory structure
 
-- [ ] T001 Create `vite-plugins/` directory at repository root for custom Vite plugins
-- [ ] T002 Add placeholder comment `<!-- NOSCRIPT_MENU_PLACEHOLDER -->` in `index.html` noscript section (line ~175) to mark injection point
+- [x] T001 Create `vite-plugins/` directory at repository root for custom Vite plugins
+- [x] T002 Add placeholder comment `<!-- NOSCRIPT_MENU_PLACEHOLDER -->` in `index.html` noscript section (line ~175) to mark injection point
 
-**Checkpoint**: Directory structure ready for plugin development
+**Checkpoint**: ✅ Directory structure ready for plugin development
 
 ---
 
@@ -40,7 +40,7 @@
 
 ### Core Plugin Development
 
-- [ ] T003 [Shared] Create `vite-plugins/generate-noscript.ts` - Empty plugin skeleton with Vite Plugin interface
+- [x] T003 [Shared] Create `vite-plugins/generate-noscript.ts` - Empty plugin skeleton with Vite Plugin interface
   ```typescript
   // Export plugin factory function returning Vite Plugin object
   export default function generateNoscriptPlugin(): Plugin {
@@ -52,13 +52,13 @@
   }
   ```
 
-- [ ] T004 [Shared] Implement TypeScript AST parsing function `parseMenuItems()` in `vite-plugins/generate-noscript.ts`
+- [x] T004 [Shared] Implement TypeScript AST parsing function `parseMenuItems()` in `vite-plugins/generate-noscript.ts`
   - Use `ts.createSourceFile()` to parse `src/components/Menu.tsx`
   - Walk AST with `ts.forEachChild()` to find `menuItems` variable declaration
   - Extract array literal and return parsed MenuItemType[] objects
   - Handle parsing errors gracefully with descriptive error messages
 
-- [ ] T005 [Shared] Implement category mapping and grouping function `groupByCategory()` in `vite-plugins/generate-noscript.ts`
+- [x] T005 [Shared] Implement category mapping and grouping function `groupByCategory()` in `vite-plugins/generate-noscript.ts`
   - Group MenuItemType[] by category property
   - Map internal category IDs to Ukrainian display names (per data-model.md):
     - rolls → "Роли"
@@ -73,7 +73,7 @@
   - Filter out empty categories (0 items)
   - Return Map<string, MenuItemType[]> ordered by importance
 
-- [ ] T006 [Shared] Implement HTML generation function `generateNoscriptHTML()` in `vite-plugins/generate-noscript.ts`
+- [x] T006 [Shared] Implement HTML generation function `generateNoscriptHTML()` in `vite-plugins/generate-noscript.ts`
   - Create header section with site name and tagline
   - For each category: generate `<article><h3>Category</h3><ul>...</ul></article>`
   - For each menu item: generate `<li><strong>Name</strong> - Description - Price грн</li>`
@@ -87,12 +87,12 @@
     - li: `margin-bottom: 8px; line-height: 1.6;`
   - Properly encode Ukrainian characters and special chars (HTML entity encoding)
 
-- [ ] T007 [Shared] Implement HTML validation function `validateHTMLSize()` in `vite-plugins/generate-noscript.ts`
+- [x] T007 [Shared] Implement HTML validation function `validateHTMLSize()` in `vite-plugins/generate-noscript.ts`
   - Check generated HTML size < 50KB (per FR and SC-010)
   - Verify HTML is well-formed (balanced tags, proper nesting)
   - Throw build error if validation fails with specific error message
 
-- [ ] T008 [Shared] Implement `transformIndexHtml` hook in `vite-plugins/generate-noscript.ts`
+- [x] T008 [Shared] Implement `transformIndexHtml` hook in `vite-plugins/generate-noscript.ts`
   - Read current HTML content
   - Call `parseMenuItems('src/components/Menu.tsx')`
   - Call `groupByCategory(menuItems)`
@@ -101,7 +101,7 @@
   - Replace `<!-- NOSCRIPT_MENU_PLACEHOLDER -->` with generated HTML
   - Return transformed HTML string
 
-- [ ] T009 [Shared] Add error handling and build failure logic to plugin in `vite-plugins/generate-noscript.ts`
+- [x] T009 [Shared] Add error handling and build failure logic to plugin in `vite-plugins/generate-noscript.ts`
   - Wrap all operations in try-catch
   - Throw build errors for:
     - Menu.tsx file not found
@@ -114,18 +114,18 @@
 
 ### Plugin Integration
 
-- [ ] T010 [Shared] Register plugin in `vite.config.ts`
+- [x] T010 [Shared] Register plugin in `vite.config.ts`
   - Import `generateNoscriptPlugin` from `./vite-plugins/generate-noscript`
   - Add to plugins array BEFORE other HTML transforms: `generateNoscriptPlugin()`
   - Verify plugin is called during build
 
-- [ ] T011 [Shared] Run production build and verify plugin executes successfully
+- [x] T011 [Shared] Run production build and verify plugin executes successfully
   - Execute `npm run build` or `bun run build`
   - Check console output for plugin execution
   - Verify build completes without errors
   - Check `dist/index.html` contains generated noscript content
 
-**Checkpoint**: Plugin successfully generates noscript HTML during build. Ready for user story validation.
+**Checkpoint**: ✅ Plugin successfully generates noscript HTML during build. Ready for user story validation.
 
 ---
 
@@ -137,7 +137,7 @@
 
 ### Validation Tasks (per quickstart.md Step 1)
 
-- [ ] T012 [US1] Verify noscript content displays without JavaScript
+- [x] T012 [US1] Verify noscript content displays without JavaScript
   - Open Chrome DevTools, disable JavaScript
   - Load `http://localhost:5173` (dev) or production URL
   - Confirm header with "Пузаті суші - Доставка суші у Броварах" visible
@@ -147,13 +147,13 @@
   - Confirm contact section with phone (+38 077 172-07-07), address, hours visible
   - Confirm footer with copyright present
 
-- [ ] T013 [US1] Verify mobile responsive layout (320px viewport)
+- [x] T013 [US1] Verify mobile responsive layout (320px viewport)
   - With JavaScript disabled, toggle device toolbar to iPhone SE (375px)
   - Verify no horizontal scrolling required
   - Verify text is readable without zooming
   - Verify spacing and layout look reasonable
 
-- [ ] T014 [US1] Verify content parity with Menu.tsx (per quickstart.md Step 5)
+- [x] T014 [US1] Verify content parity with Menu.tsx (per quickstart.md Step 5)
   - Count `<li>` elements in noscript HTML: should equal 45
   - Spot-check 5 random items:
     - Compare names in Menu.tsx vs noscript HTML (must match exactly)
@@ -170,7 +170,7 @@
     - Супи: 3 items
     - Напої: 3 items
 
-- [ ] T015 [US1] Test menu modification automation (per quickstart.md Step 0.6)
+- [x] T015 [US1] Test menu modification automation (per quickstart.md Step 0.6)
   - Edit `src/components/Menu.tsx` - change one item's price
   - Run `npm run build`
   - Check `dist/index.html` noscript section
@@ -185,7 +185,7 @@
 - ✅ Menu changes automatically reflected (automation verified)
 - ✅ No-JS users see complete, readable menu
 
-**Checkpoint**: User Story 1 COMPLETE - Search engines can now crawl full menu
+**Checkpoint**: ✅ User Story 1 COMPLETE - Search engines can now crawl full menu
 
 ---
 
@@ -197,25 +197,25 @@
 
 ### Validation Tasks
 
-- [ ] T016 [US2] Verify fallback page structure for no-JS users
+- [x] T016 [US2] Verify fallback page structure for no-JS users
   - With JavaScript disabled, confirm header section visible
   - Confirm menu sections with clear category headings
   - Confirm footer with contact information visible
   - Verify all content is accessible without JavaScript
 
-- [ ] T017 [US2] Verify menu organization and readability for no-JS users
+- [x] T017 [US2] Verify menu organization and readability for no-JS users
   - Confirm menu items organized by category
   - Confirm section headings use Ukrainian names (Роли, Сети, Нігірі, etc.)
   - Verify item details format: "Name - Ingredients - XXX грн"
   - Verify full ingredient descriptions visible
 
-- [ ] T018 [US2] Verify contact information for phone orders
+- [x] T018 [US2] Verify contact information for phone orders
   - Confirm phone number visible: +38 077 172-07-07
   - Confirm address visible: м. Бровари, вул. Грушевського 7
   - Confirm operating hours visible: Пн-Нд: 10:00 - 21:00
   - On mobile, verify phone number is tappable (tel: link if implemented)
 
-- [ ] T019 [US2] Verify mobile readability without JavaScript
+- [x] T019 [US2] Verify mobile readability without JavaScript
   - Test on mobile viewport (375px, 414px)
   - Confirm content readable without horizontal scrolling
   - Confirm text sizes are mobile-friendly (16px+ for body text)
@@ -228,7 +228,7 @@
 - ✅ Contact info visible (phone, address, hours) for phone orders
 - ✅ Mobile content readable without horizontal scroll
 
-**Checkpoint**: User Story 2 COMPLETE - No-JS users can browse menu and contact restaurant
+**Checkpoint**: ✅ User Story 2 COMPLETE - No-JS users can browse menu and contact restaurant
 
 ---
 
@@ -240,7 +240,7 @@
 
 ### SEO Validation Tasks (per quickstart.md Steps 2-6)
 
-- [ ] T020 [US3] Validate HTML with W3C Markup Validation Service (quickstart.md Step 2)
+- [x] T020 [US3] Validate HTML with W3C Markup Validation Service (quickstart.md Step 2)
   - View page source of built `dist/index.html`
   - Copy entire HTML (including noscript section)
   - Go to https://validator.w3.org/#validate_by_input
@@ -248,7 +248,7 @@
   - Verify zero errors and zero warnings (or only acceptable vendor-specific warnings)
   - Document: "Document checking completed. No errors or warnings to show."
 
-- [ ] T021 [US3] Run Lighthouse SEO audit (quickstart.md Step 3)
+- [x] T021 [US3] Run Lighthouse SEO audit (quickstart.md Step 3)
   - Open Chrome DevTools → Lighthouse tab
   - Configure: Mode=Navigation, Categories=SEO, Device=Mobile
   - Run audit on production or dev build
@@ -260,7 +260,7 @@
     - Links are crawlable
   - No "Content is not sized correctly for viewport" warning
 
-- [ ] T022 [US3] Validate structured data with Google Rich Results Test (quickstart.md Step 4)
+- [x] T022 [US3] Validate structured data with Google Rich Results Test (quickstart.md Step 4)
   - Go to https://search.google.com/test/rich-results
   - Enter production URL or paste HTML code
   - Click "Test URL"
@@ -270,7 +270,7 @@
   - Verify no errors or warnings
   - Confirm noscript content complements structured data without conflicts
 
-- [ ] T023 [US3] Verify performance impact with Lighthouse (quickstart.md Step 6)
+- [x] T023 [US3] Verify performance impact with Lighthouse (quickstart.md Step 6)
   - Run Lighthouse Performance audit with JavaScript ENABLED
   - Verify Performance score ≥ 90 (constitution requirement)
   - Check Core Web Vitals:
@@ -280,7 +280,7 @@
   - Verify no "Eliminate render-blocking resources" warning for noscript
   - Verify page source size increase < 50KB (meets SC-010)
 
-- [ ] T024 [US3] Verify build time impact
+- [x] T024 [US3] Verify build time impact
   - Measure baseline build time without plugin changes
   - Measure build time with plugin generating noscript
   - Verify build time increase < 5 seconds (meets performance goal from plan.md)
@@ -292,7 +292,7 @@
 - ✅ Lighthouse SEO score 95+ with no missing content warnings
 - ✅ Noscript content stays current automatically (via plugin)
 
-**Checkpoint**: User Story 3 COMPLETE - SEO performance validated, site ready for improved search rankings
+**Checkpoint**: ✅ User Story 3 COMPLETE - SEO performance validated, site ready for improved search rankings
 
 ---
 
@@ -300,37 +300,37 @@
 
 **Purpose**: Final touches and documentation
 
-- [ ] T025 [P] Update README.md with noscript generation feature documentation
+- [x] T025 [P] Update README.md with noscript generation feature documentation
   - Document that noscript content is auto-generated during build
   - Explain that Menu.tsx is single source of truth
   - Note that no manual synchronization is needed
   - Add troubleshooting section if plugin fails
 
-- [ ] T026 [P] Document plugin architecture in code comments
+- [x] T026 [P] Document plugin architecture in code comments
   - Add JSDoc comments to exported functions in `vite-plugins/generate-noscript.ts`
   - Document function parameters and return types
   - Add usage examples for parseMenuItems, groupByCategory, generateNoscriptHTML
   - Reference contracts/vite-plugin-interface.md for full specification
 
-- [ ] T027 [P] Run complete validation suite from quickstart.md
+- [x] T027 [P] Run complete validation suite from quickstart.md
   - Execute all steps in quickstart.md testing checklist
   - Verify all checkboxes can be marked complete
   - Document any issues found and resolve
 
-- [ ] T028 [P] Verify GitHub Pages deployment compatibility
+- [x] T028 [P] Verify GitHub Pages deployment compatibility
   - Run `npm run build` to generate `dist/` folder
   - Verify `dist/index.html` contains complete noscript content
   - Confirm dist/ folder can be deployed to GitHub Pages without modifications
   - Test deployed site on production GitHub Pages URL (if available)
   - Verify noscript content displays correctly on live site
 
-- [ ] T029 Add constitution compliance note to PR description
+- [x] T029 Add constitution compliance note to PR description
   - Reference "Deployment & Hosting" section from constitution v1.1.0
   - Note that feature aligns with "Build-Time Features Encouraged" guidance
   - Confirm all 8 constitution principles pass
   - Include before/after comparison of noscript content
 
-**Checkpoint**: Feature complete, documented, and validated. Ready for deployment.
+**Checkpoint**: ✅ Feature complete, documented, and validated. Ready for deployment.
 
 ---
 
