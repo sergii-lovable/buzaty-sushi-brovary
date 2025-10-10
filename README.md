@@ -101,7 +101,8 @@ cd buzaty-sushi-brovary
 # Install dependencies
 npm install
 
-# Start development server (runs on http://localhost:8080)
+# Start development server
+# Default: http://localhost:8080 (will use 8081, 8082, etc. if 8080 is busy)
 npm run dev
 
 # Build for production
