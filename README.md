@@ -1,64 +1,160 @@
-# Welcome to your Lovable project
+# 🍣 Пузаті суші - Brovary
 
-## Project info
+Modern sushi restaurant website with online ordering and delivery for Brovary, Ukraine.
 
-**URL**: https://lovable.dev/projects/4ed397dc-d132-4b4c-94e9-16f06bc23a29
+**Live Site**: [puzatisushi.com.ua](https://puzatisushi.com.ua)
 
-## How can I edit this code?
+## 📋 About
 
-There are several ways of editing your application.
+Пузаті суші is a full-featured restaurant website offering:
+- 🛒 Interactive menu with 12 categories and 45+ items
+- 🛍️ Shopping cart with real-time updates
+- 📦 Online ordering system via Google Forms integration
+- 📱 Fully responsive design
+- 🚀 Fast performance with Vite
+- ♿ Accessibility features (ARIA labels, semantic HTML)
+- 🔍 SEO optimized with structured data
 
-**Use Lovable**
+### Menu Categories
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4ed397dc-d132-4b4c-94e9-16f06bc23a29) and start prompting.
+1. **Роли** (Rolls) - 15 items including Philadelphia, California, Canada
+2. **Сети** (Sets) - 10 combo sets
+3. **Запечені** (Baked Rolls) - 3 baked specialties
+4. **Салат** (Salad) - Chuka seaweed salad
+5. **Сашимі** (Sashimi) - 3 varieties
+6. **Нігірі** (Nigiri Sushi) - 4 types
+7. **Гункани** (Gunkan) - 3 options
+8. **Супи** (Soups) - Miso, Tom Yam, Ramen
+9. **Напої** (Drinks) - Beverages
+10. **Міні роли / Макі** (Mini Rolls / Maki)
+11. **Суші та крім-суші** (Sushi & Cream Sushi)
+12. **Всі** (All) - View all items
 
-Changes made via Lovable will be committed automatically to this repo.
+### Contact Information
 
-**Use your preferred IDE**
+- 📍 **Address**: м. Бровари, вул. Грушевського 7
+- 📞 **Phone**: +38 (077) 172-07-07
+- 🕐 **Hours**: Пн-Нд: 10:00 - 21:00
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠 Technologies
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This project is built with modern web technologies:
 
-Follow these steps:
+- **Frontend Framework**: React 18.3
+- **Build Tool**: Vite 5.4
+- **Language**: TypeScript 5.8
+- **Styling**: Tailwind CSS 3.4
+- **UI Components**: shadcn/ui (Radix UI primitives)
+- **Routing**: React Router DOM 6.30
+- **State Management**: React hooks (useState)
+- **Forms**: React Hook Form + Zod validation
+- **Icons**: Lucide React
+- **Notifications**: Sonner toasts
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Local Development
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/buzaty-sushi-brovary.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd buzaty-sushi-brovary
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server (runs on http://localhost:8080)
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## 📝 Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Working Locally
 
-**Use GitHub Codespaces**
+Work locally with your preferred IDE (VS Code, WebStorm, etc.). All changes pushed to the `main` branch will trigger automatic deployment via GitHub Actions.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Available Scripts
 
-## What technologies are used for this project?
+```json
+{
+  "dev": "vite",                    // Start dev server
+  "build": "vite build",            // Production build
+  "build:dev": "vite build --mode development",
+  "lint": "eslint .",              // Run linter
+  "preview": "vite preview",        // Preview production build
+  "deploy": "npm run build && cp CNAME dist/ && gh-pages -d dist"
+}
+```
 
-This project is built with:
+## 📁 Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+buzaty-sushi-brovary/
+├── src/
+│   ├── components/
+│   │   ├── Cart.tsx              # Shopping cart sidebar
+│   │   ├── Footer.tsx            # Footer with contact info
+│   │   ├── Header.tsx            # Sticky header with cart
+│   │   ├── Hero.tsx              # Hero banner section
+│   │   ├── Menu.tsx              # Menu with category tabs
+│   │   ├── MenuItem.tsx          # Product card component
+│   │   ├── OrderForm.tsx         # Order form dialog
+│   │   └── ui/                   # shadcn/ui components
+│   ├── pages/
+│   │   ├── Index.tsx             # Main page
+│   │   └── NotFound.tsx          # 404 page
+│   ├── hooks/
+│   │   └── use-toast.ts          # Toast notifications hook
+│   ├── lib/
+│   │   └── utils.ts              # Utility functions
+│   ├── assets/                   # Images
+│   ├── App.tsx                   # App router
+│   ├── main.tsx                  # Entry point
+│   └── index.css                 # Global styles
+├── public/                       # Static assets
+├── dist/                         # Production build
+└── index.html                    # HTML template
+```
+
+## 🎨 Features
+
+### Shopping Cart
+- Add/remove items
+- Quantity adjustment
+- Real-time total calculation
+- Persistent during session
+
+### Order System
+- Google Forms integration
+- Customer information collection
+- Order details submission
+- Success/error notifications
+
+### SEO Optimization
+- Meta tags (Open Graph, Twitter Cards)
+- Structured data (Schema.org)
+- Semantic HTML
+- Geo-location tags
+- Sitemap and robots.txt
+
+### Responsive Design
+- Mobile-first approach
+- Tablet and desktop layouts
+- Touch-friendly interfaces
+- Smooth animations
 
 ## How can I deploy this project?
 
@@ -99,7 +195,3 @@ Every push to the `main` branch will automatically trigger a deployment via GitH
 3. Deploy to GitHub Pages
 
 You can also manually trigger a deployment from the **Actions** tab in GitHub.
-
-### Alternative: Lovable
-
-Simply open [Lovable](https://lovable.dev/projects/4ed397dc-d132-4b4c-94e9-16f06bc23a29) and click on Share -> Publish.
