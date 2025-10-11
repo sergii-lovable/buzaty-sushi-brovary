@@ -369,6 +369,38 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "krim-sushi"
   },
+  {
+    id: 30,
+    name: "Крім-суші з лососем сабосоленим",
+    description: "Лосось с/с, рис, крем-сир, норі",
+    price: 59,
+    image: sushiRollImage,
+    category: "krim-sushi"
+  },
+  {
+    id: 30,
+    name: "Крім-суші з креветкою",
+    description: "Креветка, рис, крем-сир, норі",
+    price: 59,
+    image: sushiRollImage,
+    category: "krim-sushi"
+  },
+  {
+    id: 30,
+    name: "Крім-суші з тунцем",
+    description: "Тунець, рис, крем-сир, норі",
+    price: 49,
+    image: sushiRollImage,
+    category: "krim-sushi"
+  },
+  {
+    id: 30,
+    name: "Крім-суші з вугрем",
+    description: "Вугор рис, крем-сир, норі, унагі соус, кунжут",
+    price: 69,
+    image: sushiRollImage,
+    category: "krim-sushi"
+  },
   // Чіз роли
   {
     id: 33,
