@@ -392,11 +392,11 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       
       <Tabs defaultValue="all" className="w-full" onValueChange={setSelectedCategory}>
         <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-5 mb-8" role="tablist" aria-label="Категорії меню">
-          <TabsTrigger value="all">Всі</TabsTrigger>
+          <TabsTrigger value="all">ВСІ</TabsTrigger>
           <TabsTrigger value="rolls">ФІЛАДЕЛЬФІЯ МЕНЮ</TabsTrigger>
-          <TabsTrigger value="sets">Набори / Сети</TabsTrigger>
-          <TabsTrigger value="zapecheni">Запечені роли</TabsTrigger>
-          <TabsTrigger value="kalifornija">Каліфорнія меню</TabsTrigger>
+          <TabsTrigger value="sets">НАБОРИ / СЕТИ</TabsTrigger>
+          <TabsTrigger value="zapecheni">ЗАПЕЧЕНІ РОЛИ</TabsTrigger>
+          <TabsTrigger value="kalifornija">КАЛІФОРНІЯ МЕНЮ</TabsTrigger>
           <TabsTrigger value="krim-sushi">Суші / Крім-суші</TabsTrigger>
           <TabsTrigger value="futo-maki">Макі / Футо-макі</TabsTrigger>
           <TabsTrigger value="original">Оригінальні роли</TabsTrigger>
