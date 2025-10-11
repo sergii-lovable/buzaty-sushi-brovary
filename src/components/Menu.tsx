@@ -591,7 +591,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="kalifornija">КАЛІФОРНІЯ МЕНЮ</TabsTrigger>
           <TabsTrigger value="krim-sushi">СУШІ / КРІМ-СУШІ</TabsTrigger>
           <TabsTrigger value="futo-maki">МАКІ / ФУТО-МАКІ</TabsTrigger>
-          <TabsTrigger value="original">ОРИГІНАЛЬНІ РОЛИ / ЧІЗ РОЛИ</TabsTrigger>
+          <TabsTrigger value="original">ОРИГІНАЛЬНІ / ЧІЗ РОЛИ</TabsTrigger>
           <TabsTrigger value="salat">САЛАТ ЧУКА</TabsTrigger>
           <TabsTrigger value="drinks">НАПОЇ</TabsTrigger>      
         </TabsList>
