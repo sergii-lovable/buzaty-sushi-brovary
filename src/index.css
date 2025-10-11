@@ -141,7 +141,8 @@ All colors MUST be HSL.
 [role="tablist"] {
   height: auto !important;
   min-height: 40px !important;
-  row-gap: 12px;
+  gap: 8px !important; /* Ensure gap on all screen sizes */
+  row-gap: 12px !important;
 }
 
 /* Prevent text overflow on all screen sizes */

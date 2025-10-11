@@ -631,7 +631,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
       <h2 className="text-4xl font-bold text-center mb-12">Наше меню</h2>
       
       <Tabs defaultValue="all" className="w-full" onValueChange={setSelectedCategory}>
-        <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-5 mb-12 max-sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-sm:gap-1" role="tablist" aria-label="Категорії меню">
+        <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-5 gap-2 mb-12 max-sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-sm:gap-1" role="tablist" aria-label="Категорії меню">
           <TabsTrigger value="all">ВСІ</TabsTrigger>
           <TabsTrigger value="rolls">ФІЛАДЕЛЬФІЯ МЕНЮ</TabsTrigger>
           <TabsTrigger value="sets">НАБОРИ / СЕТИ</TabsTrigger>
