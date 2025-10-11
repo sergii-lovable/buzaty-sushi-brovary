@@ -100,24 +100,8 @@ const menuItems: MenuItemType[] = [
     price: 249,
     image: sushiRollImage,
     category: "rolls"
-  },
-  {
-    id: 14,
-    name: "Канада",
-    description: "Вугор, крем-сир, огірок, тамаго, краб-кейк, кунжут, рис, норі, унагі соус",
-    price: 209,
-    image: sushiRollImage,
-    category: "rolls"
-  },
-  {
-    id: 15,
-    name: "Філадельфія з тунцем",
-    description: "Тунець, крем-сир, огірок, рис, норі, ікра масаго",
-    price: 199,
-    image: sushiRollImage,
-    category: "rolls"
-  },
-  // Набори / Сети
+  },  
+   // Набори / Сети
   {
     id: 16,
     name: "Сет 'Суші Мікс'",
@@ -290,32 +274,16 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "nigiri-sushi"
   },
-  // Оригінальні
+  // Оригінальні роли
   {
-    id: 37,
-    name: "Гункан з ікрою лосося",
-    description: "Рис в норі з ікрою лосося",
-    price: 79,
+    id: 14,
+    name: "Канада",
+    description: "Вугор, крем-сир, огірок, тамаго, краб-кейк, кунжут, рис, норі, унагі соус",
+    price: 209,
     image: sushiRollImage,
-    category: "gunkan"
+    category: "original"
   },
-  {
-    id: 38,
-    name: "Гункан з ікрою масаго",
-    description: "Рис в норі з ікрою масаго та спайсі соусом",
-    price: 69,
-    image: sushiRollImage,
-    category: "gunkan"
-  },
-  {
-    id: 39,
-    name: "Гункан з тунцем",
-    description: "Рис в норі з тунцем та спайсі майонезом",
-    price: 75,
-    image: sushiRollImage,
-    category: "gunkan"
-  },
-  // Салат Чука
+   // Салат Чука
   {
     id: 29,
     name: "Салат Чука",
@@ -324,44 +292,12 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "salat"
   },
-  {
-    id: 41,
-    name: "Том Ям з креветками",
-    description: "Гострий тайський суп з креветками, грибами, томатами",
-    price: 139,
-    image: sushiRollImage,
-    category: "soup"
-  },
-  {
-    id: 42,
-    name: "Рамен з куркою",
-    description: "Японська локшина в курячому бульйоні з яйцем та овочами",
-    price: 149,
-    image: sushiRollImage,
-    category: "soup"
-  },
-  // Напої
+   // Напої
   {
     id: 43,
     name: "Coca-Cola 0.33л",
     description: "Класична кола в банці",
-    price: 35,
-    image: sushiRollImage,
-    category: "drinks"
-  },
-  {
-    id: 44,
-    name: "Зелений чай",
-    description: "Гарячий японський зелений чай",
-    price: 25,
-    image: sushiRollImage,
-    category: "drinks"
-  },
-  {
-    id: 45,
-    name: "Лимонад домашній",
-    description: "Освіжаючий лимонад власного приготування 0.5л",
-    price: 55,
+    price: 40,
     image: sushiRollImage,
     category: "drinks"
   },
