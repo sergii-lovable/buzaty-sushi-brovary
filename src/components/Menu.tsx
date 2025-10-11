@@ -329,21 +329,37 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "krim-sushi"
   },
-  {
-    id: 31,
-    name: "Сашимі з тунця",
-    description: "8 шт свіжого філе тунця, імбир, васабі, соєвий соус",
-    price: 219,
+ {
+    id: 30,
+    name: "Лосось",
+    description: "Лосось, рис",
+    price: 49,
     image: sushiRollImage,
-    category: "sashimi"
+    category: "krim-sushi"
+  },
+ {
+    id: 30,
+    name: "Лосось",
+    description: "Лосось, рис",
+    price: 49,
+    image: sushiRollImage,
+    category: "krim-sushi"
   },
   {
-    id: 32,
-    name: "Сашимі Мікс",
-    description: "12 шт асорті: лосось, тунець, вугор, імбир, васабі",
-    price: 329,
+    id: 30,
+    name: "Лосось",
+    description: "Лосось, рис",
+    price: 49,
     image: sushiRollImage,
-    category: "sashimi"
+    category: "krim-sushi"
+  },
+  {
+    id: 30,
+    name: "Лосось",
+    description: "Лосось, рис",
+    price: 49,
+    image: sushiRollImage,
+    category: "krim-sushi"
   },
   // Чіз роли
   {
