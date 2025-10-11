@@ -482,7 +482,7 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "futo-maki"
   },
-  // Оригінальні роли
+  // Оригінальні роли / ЧІЗ РОЛИ
   {
     id: 61,
     name: "Канада",
@@ -520,6 +520,30 @@ const menuItems: MenuItemType[] = [
     name: "Червоний дракон",
     description: "Вугор, лосось, тамаго, авокадо, ікра масаго, майонез, рис, норі",
     price: 309,
+    image: sushiRollImage,
+    category: "original"
+  },
+  {
+    id: 66,
+    name: "Чіз рол з лососем",
+    description: "Лосось, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
+    price: 199,
+    image: sushiRollImage,
+    category: "original"
+  },
+  {
+    id: 67,
+    name: "Чіз рол з креветкою",
+    description: "Креветка, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
+    price: 229,
+    image: sushiRollImage,
+    category: "original"
+  },
+  {
+    id: 68,
+    name: "Чіз рол з вугрем",
+    description: "Вугор, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
+    price: 239,
     image: sushiRollImage,
     category: "original"
   },
