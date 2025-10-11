@@ -331,32 +331,40 @@ const menuItems: MenuItemType[] = [
   },
  {
     id: 30,
-    name: "Лосось",
-    description: "Лосось, рис",
-    price: 49,
+    name: "Лосось слабосолений",
+    description: "Лосось с/с, рис",
+    price: 59,
     image: sushiRollImage,
     category: "krim-sushi"
   },
  {
     id: 30,
-    name: "Лосось",
-    description: "Лосось, рис",
+    name: "Креветка",
+    description: "Креветка, рис",
+    price: 59,
+    image: sushiRollImage,
+    category: "krim-sushi"
+  },
+  {
+    id: 30,
+    name: "Тунець",
+    description: "Тунець, рис",
     price: 49,
     image: sushiRollImage,
     category: "krim-sushi"
   },
   {
     id: 30,
-    name: "Лосось",
-    description: "Лосось, рис",
-    price: 49,
+    name: "Вугор",
+    description: "Вугор, рис, унагі соус, кунжут",
+    price: 69,
     image: sushiRollImage,
     category: "krim-sushi"
   },
   {
     id: 30,
-    name: "Лосось",
-    description: "Лосось, рис",
+    name: "Крім-суші з лососем",
+    description: "Лосось, рис, крем-сир, норі",
     price: 49,
     image: sushiRollImage,
     category: "krim-sushi"
