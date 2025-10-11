@@ -401,9 +401,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="nigiri-sushi">Нігірі</TabsTrigger>
           <TabsTrigger value="gunkan">Гункани</TabsTrigger>
           <TabsTrigger value="soup">Супи</TabsTrigger>
-          <TabsTrigger value="drinks">Напої</TabsTrigger>
-          <TabsTrigger value="minirolls">Міні роли / Макі</TabsTrigger>
-          <TabsTrigger value="krimsushi">Суші та крім-суші</TabsTrigger>
+          <TabsTrigger value="drinks">Напої</TabsTrigger>      
         </TabsList>
 
         <TabsContent value={selectedCategory} className="mt-6">
