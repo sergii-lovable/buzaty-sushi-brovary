@@ -244,7 +244,7 @@ const menuItems: MenuItemType[] = [
     id: 13,
     name: "Каліфорнія з беконом в кунжуті",
     description: "Бекон, огірок, майонез, рис, норі, унагі соус, кунжут",
-    price: 209,
+    price: 179,
     image: sushiRollImage,
     category: "kalifornija"
   },  
@@ -259,23 +259,23 @@ const menuItems: MenuItemType[] = [
   {
     id: 13,
     name: "Каліфорнія з вугрем в кунжуті",
-    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
-    price: 209,
+    description: "Вугор, огірок, майонез, рис, норі, унагі соус, кунжут",
+    price: 229,
     image: sushiRollImage,
     category: "kalifornija"
   },  
   {
     id: 13,
-    name: "Каліфорнія з креветкою в кунжуті",
-    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
-    price: 209,
+    name: "Каліфорнія з лососем в кунжуті",
+    description: "Лосось, авокадо, майонез, рис, норі, унагі соус, кунжут",
+    price: 199,
     image: sushiRollImage,
     category: "kalifornija"
   },  
   {
     id: 13,
-    name: "Каліфорнія з креветкою в кунжуті",
-    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    name: "Каліфорнія з лососем слабосолоним",
+    description: "Лосось, авокадо, майонез, рис, норі, кунжут",
     price: 209,
     image: sushiRollImage,
     category: "kalifornija"
