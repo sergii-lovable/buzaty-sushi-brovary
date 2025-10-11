@@ -397,11 +397,11 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="sets">НАБОРИ / СЕТИ</TabsTrigger>
           <TabsTrigger value="zapecheni">ЗАПЕЧЕНІ РОЛИ</TabsTrigger>
           <TabsTrigger value="kalifornija">КАЛІФОРНІЯ МЕНЮ</TabsTrigger>
-          <TabsTrigger value="krim-sushi">Суші / Крім-суші</TabsTrigger>
-          <TabsTrigger value="futo-maki">Макі / Футо-макі</TabsTrigger>
-          <TabsTrigger value="original">Оригінальні роли</TabsTrigger>
-          <TabsTrigger value="salat">Салат Чука</TabsTrigger>
-          <TabsTrigger value="drinks">Напої</TabsTrigger>      
+          <TabsTrigger value="krim-sushi">СУШІ / КРІМ-СУШІ</TabsTrigger>
+          <TabsTrigger value="futo-maki">МАКІ / ФУТО-МАКІ</TabsTrigger>
+          <TabsTrigger value="original">ОРИГІНАЛЬНІ РОЛИ</TabsTrigger>
+          <TabsTrigger value="salat">САЛАТ ЧУКА</TabsTrigger>
+          <TabsTrigger value="drinks">НАПОЇ</TabsTrigger>      
         </TabsList>
 
         <TabsContent value={selectedCategory} className="mt-6">
