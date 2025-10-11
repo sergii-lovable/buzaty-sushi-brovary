@@ -103,7 +103,7 @@ const menuItems: MenuItemType[] = [
   },  
    // Набори / Сети
   {
-    id: 16,
+    id: 13,
     name: "Сет 'Суші Мікс'",
     description: "20 шт / 405 гр: Філадельфія 1/2, Каліфорнія з лососем в ікрі 1/2, Каліфорнія з крабом в кунжуті 1/2, Макі огірок",
     price: 319,
@@ -111,7 +111,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 17,
+    id: 14,
     name: "Сет 'Фієста'",
     description: "20 шт / 480 гр: Філадельфія 1/2, Каліфорнія з крабом в ікрі 1/2, Каліфорнія з тунцем теріякі 1/2, Лавв Чіз Торі 1/2, Макі вершковий лосось 1/2",
     price: 319,
@@ -119,7 +119,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 18,
+    id: 15,
     name: "Сет 'Запечений'",
     description: "24 шт / 740 гр: Запечений Філадельфія, Запечений з мідіями і беконом, Запечений Чікен",
     price: 399,
@@ -127,7 +127,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 19,
+    id: 16,
     name: "Сет 'Популярний'",
     description: "32 шт / 820 г: Філадельфія, Осака, Каліфорнія з тунцем теріякі, Макі вершковий лосось",
     price: 549,
@@ -135,7 +135,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 20,
+    id: 17,
     name: "Сет 'Філадельфія Плюс'",
     description: "26 шт / 800 гр: Філадельфія з лососем с/с, Лава Чіз Торі, Канада, Крім-суші з лососем 2шт",
     price: 569,
@@ -143,7 +143,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 21,
+    id: 18,
     name: "Сет 'Фішка'",
     description: "32 шт / 920 гр: Філадельфія, Філадельфія Грін, Каліфорнія з беконом, Норвезький",
     price: 619,
@@ -151,7 +151,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 22,
+    id: 19,
     name: "Сет 'Хіт Сет'",
     description: "32 шт /900 г: Чіз рол з креветкою, Філадельфія з беконом, Ніжність, Макі авокадо",
     price: 639,
@@ -159,7 +159,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 23,
+    id: 20,
     name: "Сет 'Комбі Сет'",
     description: "32 шт /1000 г: Філадельфія 50/50, Ніжність, Запечений Чікен, Запечений з лососем 1/2, Запечений з тунцем теріякі 1/2",
     price: 649,
@@ -167,7 +167,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 24,
+    id: 21,
     name: "Сет 'Фаворит'",
     description: "48 шт /1550 г: Філадельфія з лососем с/с, Чіз рол з лососем, Канада, Філадельфія Грін, Запечений з лососем, Запечений з тунцем теріякі",
     price: 999,
@@ -175,7 +175,7 @@ const menuItems: MenuItemType[] = [
     category: "sets"
   },
   {
-    id: 25,
+    id: 22,
     name: "Сет 'Пузаті суші'",
     description: "64 шт /1750 г: Філадельфія, Ніжність, Канада, Філадельфія з тунцем, Філадельфія з лососем та тунцем, Каліфорнія з беконом, Каліфорнія з лососем с/с в ікрі, Норвезький",
     price: 1499,
@@ -184,7 +184,7 @@ const menuItems: MenuItemType[] = [
   },
   // Запечені
   {
-    id: 26,
+    id: 23,
     name: "Запечений з лососем",
     description: "Лосось, огірок, тамаго, ікра масаго, рис, норі, унагі соус, кунжут, сирний соус",
     price: 229,
@@ -192,7 +192,7 @@ const menuItems: MenuItemType[] = [
     category: "zapecheni"
   },
   {
-    id: 27,
+    id: 24,
     name: "Запечений Чікен",
     description: "Курка теріякі, крем-сир, тамаго, ананас, унагі соус, кунжут, рис, норі, сирний соус",
     price: 189,
@@ -200,7 +200,7 @@ const menuItems: MenuItemType[] = [
     category: "zapecheni"
   },
   {
-    id: 28,
+    id: 25,
     name: "Запечений з мідіями і беконом",
     description: "Мідії копчені, бекон, тамаго, унагі соус, рис, норі, кунжут, сирний соус",
     price: 199,
@@ -208,7 +208,7 @@ const menuItems: MenuItemType[] = [
     category: "zapecheni"
   },
   {
-    id: 28,
+    id: 26,
     name: "Запечений з тунцем теріякі",
     description: "Тунець теріякі, тамаго, огірок, унагі соус, рис, норі, кунжут, сирний соус",
     price: 199,
@@ -216,7 +216,7 @@ const menuItems: MenuItemType[] = [
     category: "zapecheni"
   },
   {
-    id: 28,
+    id: 27,
     name: "Запечений Філадельфія",
     description: "Лосось, крем-сир, тамаго, огірок, унагі соус, рис, норі, кунжут, сирний соус",
     price: 209,
@@ -233,7 +233,7 @@ const menuItems: MenuItemType[] = [
   },
  // Каліфорнія меню
    {
-    id: 13,
+    id: 29,
     name: "Каліфорнія з креветкою в кунжуті",
     description: "Креветка, авокадо, майонез, рис, норі, кунжут",
     price: 209,
@@ -241,7 +241,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 30,
     name: "Каліфорнія з беконом в кунжуті",
     description: "Бекон, огірок, майонез, рис, норі, унагі соус, кунжут",
     price: 179,
@@ -249,7 +249,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 31,
     name: "Каліфорнія з тунцем теріякі",
     description: "Тунець, огірок, майонез, рис, норі, унагі соус, кунжут",
     price: 199,
@@ -257,7 +257,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 32,
     name: "Каліфорнія з вугрем в кунжуті",
     description: "Вугор, огірок, майонез, рис, норі, унагі соус, кунжут",
     price: 229,
@@ -265,7 +265,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 33,
     name: "Каліфорнія з лососем в кунжуті",
     description: "Лосось, авокадо, майонез, рис, норі, унагі соус, кунжут",
     price: 199,
@@ -273,7 +273,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 34,
     name: "Каліфорнія з лососем слабосолоним",
     description: "Лосось, авокадо, майонез, рис, норі, кунжут",
     price: 209,
@@ -281,7 +281,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 35,
     name: "Каліфорнія з крабом в ікрі",
     description: "Краб-кейк, авокадо, майонез, рис, норі, ікра масаго",
     price: 199,
@@ -289,7 +289,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 36,
     name: "Каліфорнія з лососем в ікрі",
     description: "Лосось, авокадо, майонез, рис, норі, ікра масаго",
     price: 219,
@@ -297,7 +297,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 37,
     name: "Каліфорнія з тунцем в ікрі",
     description: "Тунець, авокадо, майонез, рис, норі, ікра масаго",
     price: 219,
@@ -305,7 +305,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 38,
     name: "Каліфорнія з лососем слабосоленим в ікрі",
     description: "Лосось с/с, авокадо, майонез, рис, норі, ікра масаго",
     price: 209,
@@ -313,7 +313,7 @@ const menuItems: MenuItemType[] = [
     category: "kalifornija"
   },  
   {
-    id: 13,
+    id: 39,
     name: "Каліфорнія з креветкою в ікрі",
     description: "Креветка, авокадо, майонез, рис, норі, ікра масаго",
     price: 229,
@@ -322,7 +322,7 @@ const menuItems: MenuItemType[] = [
   },  
   // Суші / крім-суші
   {
-    id: 30,
+    id: 40,
     name: "Суші-Лосось",
     description: "Лосось, рис",
     price: 49,
@@ -330,7 +330,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
  {
-    id: 30,
+    id: 41,
     name: "Суші-Лосось слабосолений",
     description: "Лосось с/с, рис",
     price: 59,
@@ -338,7 +338,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
  {
-    id: 30,
+    id: 42,
     name: "Креветка",
     description: "Креветка, рис",
     price: 59,
@@ -346,7 +346,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
   {
-    id: 30,
+    id: 43,
     name: "Тунець",
     description: "Тунець, рис",
     price: 49,
@@ -354,7 +354,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
   {
-    id: 30,
+    id: 44,
     name: "Вугор",
     description: "Вугор, рис, унагі соус, кунжут",
     price: 69,
@@ -362,7 +362,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
   {
-    id: 30,
+    id: 45,
     name: "Крім-суші з лососем",
     description: "Лосось, рис, крем-сир, норі",
     price: 49,
@@ -370,7 +370,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
   {
-    id: 30,
+    id: 46,
     name: "Крім-суші з лососем сабосоленим",
     description: "Лосось с/с, рис, крем-сир, норі",
     price: 59,
@@ -378,7 +378,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
   {
-    id: 30,
+    id: 47,
     name: "Крім-суші з креветкою",
     description: "Креветка, рис, крем-сир, норі",
     price: 59,
@@ -386,7 +386,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
   {
-    id: 30,
+    id: 48,
     name: "Крім-суші з тунцем",
     description: "Тунець, рис, крем-сир, норі",
     price: 49,
@@ -394,7 +394,7 @@ const menuItems: MenuItemType[] = [
     category: "krim-sushi"
   },
   {
-    id: 30,
+    id: 49,
     name: "Крім-суші з вугрем",
     description: "Вугор рис, крем-сир, норі, унагі соус, кунжут",
     price: 69,
@@ -403,36 +403,36 @@ const menuItems: MenuItemType[] = [
   },
   // Макі / футо-макі
   {
-    id: 33,
-    name: "Нігірі з лососем",
-    description: "2 шт свіжого лосося на рисі з васабі",
-    price: 89,
+    id: 50,
+    name: "Макі огірок",
+    description: "Огірок, кунжут, рис, норі",
+    price: 69,
     image: sushiRollImage,
     category: "futo-maki"
   },
   {
-    id: 34,
-    name: "Нігірі з тунцем",
-    description: "2 шт свіжого тунця на рисі з васабі",
-    price: 95,
+    id: 50,
+    name: "Макі огірок",
+    description: "Огірок, кунжут, рис, норі",
+    price: 69,
     image: sushiRollImage,
-    category: "nigiri-sushi"
+    category: "futo-maki"
   },
   {
-    id: 35,
-    name: "Нігірі з вугрем",
-    description: "2 шт копченого вугра на рисі з унагі соусом",
-    price: 99,
+    id: 50,
+    name: "Макі огірок",
+    description: "Огірок, кунжут, рис, норі",
+    price: 69,
     image: sushiRollImage,
-    category: "nigiri-sushi"
+    category: "futo-maki"
   },
   {
-    id: 36,
-    name: "Нігірі з креветкою",
-    description: "2 шт тигрової креветки на рисі",
-    price: 85,
+    id: 50,
+    name: "Макі огірок",
+    description: "Огірок, кунжут, рис, норі",
+    price: 69,
     image: sushiRollImage,
-    category: "nigiri-sushi"
+    category: "futo-maki"
   },
   // Оригінальні роли
   {
