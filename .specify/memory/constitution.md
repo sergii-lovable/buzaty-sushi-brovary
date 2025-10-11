@@ -81,6 +81,7 @@ Avoid premature abstraction. Components SHOULD be colocated with usage. State ma
 ### Testing Strategy
 
 - Manual testing of order flow (add to cart → checkout → form submission) REQUIRED before each release
+- **Playwright visual verification REQUIRED** for all UI changes affecting layout, spacing, or responsive behavior
 - Accessibility spot-checks using axe DevTools or Lighthouse RECOMMENDED
 - Automated E2E tests are OPTIONAL (not mandatory for this project size)
 
@@ -90,6 +91,39 @@ Avoid premature abstraction. Components SHOULD be colocated with usage. State ma
 - No TypeScript errors (`tsc --noEmit`)
 - Visual review on mobile (375px) and desktop (1280px)
 - Cart state persistence across page refresh verified
+
+### Playwright Visual Verification Requirements
+
+**Mandatory for UI Changes**: All changes affecting layout, spacing, responsive behavior, or visual appearance MUST include Playwright visual verification.
+
+#### Required Test Categories
+
+1. **Spacing Validation**: Automated measurement of spacing between UI elements
+2. **Responsive Behavior**: Verification of layout changes across screen sizes (320px, 375px, 768px, 1200px)
+3. **Touch Target Compliance**: Validation of minimum 44px touch targets on mobile
+4. **Visual Regression**: Screenshot comparison to prevent unintended visual changes
+5. **Performance Impact**: Core Web Vitals measurement (LCP ≤ 2.5s, CLS ≤ 0.1, INP ≤ 200ms)
+
+#### Test Implementation Requirements
+
+- **Test Structure**: Organize tests by feature and screen size
+- **Screenshot Baselines**: Capture before/after screenshots for visual comparison
+- **Automated Validation**: Use bounding box measurements for precise spacing verification
+- **Mobile Testing**: Include mobile device testing (Pixel 5, iPhone 12)
+- **Accessibility Testing**: Verify WCAG 2.2 AA compliance through automated checks
+
+#### Integration with Development Workflow
+
+- **Pre-Implementation**: Capture baseline screenshots and measurements
+- **During Implementation**: Run tests incrementally to guide development
+- **Post-Implementation**: Validate all requirements met and no regressions introduced
+- **PR Requirements**: Include Playwright test results in pull request descriptions
+
+#### Test Maintenance
+
+- **Screenshot Updates**: Update baseline screenshots when intentional design changes occur
+- **Threshold Adjustments**: Refine measurement thresholds based on design system evolution
+- **Continuous Integration**: Execute visual tests on every PR and main branch updates
 
 ## Deployment & Hosting
 
@@ -175,5 +209,7 @@ This constitution supersedes all other development practices. PRs that violate p
 
 ---
 
-**Version**: 1.1.0 | **Ratified**: 2025-10-10 | **Last Amended**: 2025-10-10  
-**Change Log**: v1.1.0 - Added "Deployment & Hosting" section documenting GitHub Pages static hosting requirements and build-time feature guidance
+**Version**: 1.2.0 | **Ratified**: 2025-10-10 | **Last Amended**: 2024-12-19  
+**Change Log**: 
+- v1.2.0 - Added "Playwright Visual Verification Requirements" section mandating automated visual testing for all UI changes
+- v1.1.0 - Added "Deployment & Hosting" section documenting GitHub Pages static hosting requirements and build-time feature guidance

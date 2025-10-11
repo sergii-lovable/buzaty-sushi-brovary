@@ -6,6 +6,8 @@ Auto-generated from all feature plans. Last updated: 2025-10-10
 - TypeScript 5.x (development), HTML5 (output) + Vite (build tool), React (application framework) (002-create-up-to)
 - TypeScript 5.x (development), HTML5 (output), Node.js (build scripts) + Vite (build tool), React (application framework), Vite Plugin API (for automation), TypeScript Compiler API (for AST parsing) (002-create-up-to)
 - N/A (static HTML content generated at build time) (002-create-up-to)
+- TypeScript 5.8.3, React 18.3.1 + Vite 5.4.19, Tailwind CSS 3.4.17, shadcn/ui components, Radix UI primitives (003-fix-menu-design)
+- N/A (client-side state only) (003-fix-menu-design)
 
 ## Project Structure
 ```
@@ -16,11 +18,43 @@ tests/
 
 ## Commands
 npm test [ONLY COMMANDS FOR ACTIVE TECHNOLOGIES][ONLY COMMANDS FOR ACTIVE TECHNOLOGIES] npm run lint
+npm run test (Playwright visual verification)
 
 ## Code Style
 TypeScript 5.x (development), HTML5 (output): Follow standard conventions
 
+## Playwright Visual Verification Requirements
+
+**MANDATORY**: All UI changes affecting layout, spacing, responsive behavior, or visual appearance MUST include Playwright visual verification.
+
+### Required Test Categories
+1. **Spacing Validation**: Automated measurement of spacing between UI elements
+2. **Responsive Behavior**: Verification across screen sizes (320px, 375px, 768px, 1200px)
+3. **Touch Target Compliance**: Validation of minimum 44px touch targets on mobile
+4. **Visual Regression**: Screenshot comparison to prevent unintended changes
+5. **Performance Impact**: Core Web Vitals measurement (LCP ≤ 2.5s, CLS ≤ 0.1, INP ≤ 200ms)
+
+### Test Implementation Standards
+- **Test Structure**: Organize by feature and screen size
+- **Screenshot Baselines**: Capture before/after screenshots
+- **Automated Validation**: Use bounding box measurements for precise verification
+- **Mobile Testing**: Include Pixel 5 and iPhone 12 device testing
+- **Accessibility Testing**: Verify WCAG 2.2 AA compliance
+
+### Development Workflow Integration
+- **Pre-Implementation**: Capture baseline screenshots and measurements
+- **During Implementation**: Run tests incrementally to guide development
+- **Post-Implementation**: Validate all requirements met, no regressions
+- **PR Requirements**: Include Playwright test results in pull request descriptions
+
+### Test Maintenance
+- **Screenshot Updates**: Update baselines when intentional design changes occur
+- **Threshold Adjustments**: Refine measurements based on design system evolution
+- **Continuous Integration**: Execute visual tests on every PR and main branch updates
+
 ## Recent Changes
+- 003-fix-menu-design: Added Playwright visual verification requirements for all UI changes
+- 003-fix-menu-design: Added TypeScript 5.8.3, React 18.3.1 + Vite 5.4.19, Tailwind CSS 3.4.17, shadcn/ui components, Radix UI primitives
 - 002-create-up-to: Added TypeScript 5.x (development), HTML5 (output), Node.js (build scripts) + Vite (build tool), React (application framework), Vite Plugin API (for automation), TypeScript Compiler API (for AST parsing)
 - 002-create-up-to: Added TypeScript 5.x (development), HTML5 (output) + Vite (build tool), React (application framework)
 
