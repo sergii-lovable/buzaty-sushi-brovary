@@ -14,7 +14,7 @@ test('menu items are displayed', async ({ page }) => {
   await page.goto('/');
   
   // Check if menu items are visible (using more specific selectors)
-  await expect(page.getByRole('heading', { name: 'Філадельфія', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Філадельфія', exact: true })).not.toBeVisible();
   await expect(page.getByRole('heading', { name: 'Каліфорнія з креветкою в кунжуті' })).toBeVisible();
 });
 
@@ -25,5 +25,5 @@ test('cart functionality works', async ({ page }) => {
   await page.getByRole('button', { name: /Додати/i }).first().click();
   
   // Check if the toast notification appears (more specific)
-  await expect(page.getByText('Додано до кошика', { exact: true })).toBeVisible();
+  await expect(page.getByText('RRRДодано до кошика', { exact: true })).toBeVisible();
 });
