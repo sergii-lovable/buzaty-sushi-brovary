@@ -323,7 +323,7 @@ const menuItems: MenuItemType[] = [
   // Суші / крім-суші
   {
     id: 30,
-    name: "Лосось",
+    name: "Суші-Лосось",
     description: "Лосось, рис",
     price: 49,
     image: sushiRollImage,
@@ -331,7 +331,7 @@ const menuItems: MenuItemType[] = [
   },
  {
     id: 30,
-    name: "Лосось слабосолений",
+    name: "Суші-Лосось слабосолений",
     description: "Лосось с/с, рис",
     price: 59,
     image: sushiRollImage,
