@@ -1,8 +1,8 @@
 # 🍣 Пузаті суші - Brovary
 
 [![Deploy to GitHub Pages](https://github.com/sergii-lovable/buzaty-sushi-brovary/actions/workflows/deploy.yml/badge.svg)](https://github.com/sergii-lovable/buzaty-sushi-brovary/actions/workflows/deploy.yml)
-[![Tests](https://img.shields.io/badge/tests-105%20passing-brightgreen)](https://github.com/sergii-lovable/buzaty-sushi-brovary/actions/workflows/deploy.yml)
-[![Playwright](https://img.shields.io/badge/playwright-5%20browsers-blue)](https://playwright.dev/)
+[![Tests](https://img.shields.io/endpoint?url=https://puzatisushi.com.ua/test-stats.json)](https://github.com/sergii-lovable/buzaty-sushi-brovary/actions/workflows/deploy.yml)
+[![Playwright](https://img.shields.io/endpoint?url=https://puzatisushi.com.ua/browser-stats.json)](https://playwright.dev/)
 
 Modern sushi restaurant website with online ordering and delivery for Brovary, Ukraine.
 
@@ -177,6 +177,8 @@ npx playwright show-report
 - HTML reports are generated in `playwright-report/`
 - Screenshots and videos captured on failure
 - Test traces available for debugging
+
+> **Note**: The test count and browser badges at the top of this README are automatically updated on every deployment. The badges dynamically fetch data from `https://puzatisushi.com.ua/test-stats.json` and `https://puzatisushi.com.ua/browser-stats.json`, which are generated during the CI/CD pipeline by analyzing test results and `playwright.config.ts` without creating any commits to this repository.
 
 ## 📁 Project Structure
 
