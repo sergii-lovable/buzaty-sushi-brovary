@@ -484,10 +484,42 @@ const menuItems: MenuItemType[] = [
   },
   // Оригінальні роли
   {
-    id: 14,
+    id: 61,
     name: "Канада",
     description: "Вугор, крем-сир, огірок, тамаго, краб-кейк, кунжут, рис, норі, унагі соус",
     price: 209,
+    image: sushiRollImage,
+    category: "original"
+  },
+  {
+    id: 62,
+    name: "Лава Чіз Торі",
+    description: "Курка теріякі, крем-сир, тамаго, соус лава, рис, норі",
+    price: 189,
+    image: sushiRollImage,
+    category: "original"
+  },
+  {
+    id: 63,
+    name: "Ніжність",
+    description: "Лосось, крем-сир, тамаго, крабовий соус, рис, норі",
+    price: 209,
+    image: sushiRollImage,
+    category: "original"
+  },
+  {
+    id: 64,
+    name: "Осака",
+    description: "Лосось с/с, креветка, ікра масаго, крем-сир, огірок, рис, норі",
+    price: 229,
+    image: sushiRollImage,
+    category: "original"
+  },
+  {
+    id: 65,
+    name: "Червоний дракон",
+    description: "Вугор, лосось, тамаго, авокадо, ікра масаго, майонез, рис, норі",
+    price: 309,
     image: sushiRollImage,
     category: "original"
   },
