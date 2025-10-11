@@ -122,7 +122,7 @@ const menuItems: MenuItemType[] = [
     id: 15,
     name: "Сет 'Запечений'",
     description: "24 шт / 740 гр: Запечений Філадельфія, Запечений з мідіями і беконом, Запечений Чікен",
-    price: 399,
+    price: 499,
     image: sushiRollImage,
     category: "sets"
   },
