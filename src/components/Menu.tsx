@@ -240,7 +240,87 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "kalifornija"
   },  
-  // Каліфорнія меню
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },  
+  // Суші / крім-суші
   {
     id: 30,
     name: "Сашимі з лосося",
