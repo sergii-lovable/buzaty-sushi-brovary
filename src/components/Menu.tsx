@@ -396,7 +396,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="rolls">Філадельфія меню</TabsTrigger>
           <TabsTrigger value="sets">Набори / Сети</TabsTrigger>
           <TabsTrigger value="nigiri">Запечені роли</TabsTrigger>
-          <TabsTrigger value="salat">Салат</TabsTrigger>
+          <TabsTrigger value="kalifornija">Каліфорнія меню</TabsTrigger>
           <TabsTrigger value="sashimi">Сашимі</TabsTrigger>
           <TabsTrigger value="nigiri-sushi">Нігірі</TabsTrigger>
           <TabsTrigger value="gunkan">Гункани</TabsTrigger>
