@@ -411,26 +411,26 @@ const menuItems: MenuItemType[] = [
     category: "futo-maki"
   },
   {
-    id: 50,
-    name: "Макі огірок",
-    description: "Огірок, кунжут, рис, норі",
-    price: 69,
+    id: 51,
+    name: "Хіяші макі",
+    description: "Суміш водоростей, горіховий соус, рис, норі",
+    price: 79,
     image: sushiRollImage,
     category: "futo-maki"
   },
   {
-    id: 50,
-    name: "Макі огірок",
-    description: "Огірок, кунжут, рис, норі",
-    price: 69,
+    id: 52,
+    name: "Макі авокадо",
+    description: "Авокадо, кунжут, рис, норі, унагі соус",
+    price: 79,
     image: sushiRollImage,
     category: "futo-maki"
   },
   {
-    id: 50,
-    name: "Макі огірок",
-    description: "Огірок, кунжут, рис, норі",
-    price: 69,
+    id: 53,
+    name: "Макі лосось",
+    description: "Лосось, рис, норі",
+    price: 99,
     image: sushiRollImage,
     category: "futo-maki"
   },
