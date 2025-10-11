@@ -40,16 +40,23 @@ jobs:
       - name: Run Playwright tests
         id: tests
         continue-on-error: true
-        run: npm test -- --reporter=json > test-results.json
+        run: |
+          # Run tests with JSON reporter, capture output properly
+          npx playwright test --reporter=json > test-results.json 2>&1 || true
+          
+          # Extract just the JSON part (after the npm/node output)
+          sed -n '/{/,$ p' test-results.json > test-results-clean.json
+          mv test-results-clean.json test-results.json
 
       - name: Generate test stats and browser count badges
         if: always()
         run: |
           # Extract test counts from Playwright JSON report
           if [ -f "test-results.json" ]; then
-            # Parse Playwright JSON output for stats
-            PASSED=$(jq '[.suites[].specs[].tests[] | select(.status == "expected" or .status == "passed")] | length' test-results.json 2>/dev/null || echo "0")
-            FAILED=$(jq '[.suites[].specs[].tests[] | select(.status == "failed" or .status == "timedOut")] | length' test-results.json 2>/dev/null || echo "0")
+            # Parse Playwright JSON output stats section for accurate counts
+            PASSED=$(jq -r '.stats.expected // 0' test-results.json 2>/dev/null || echo "0")
+            FAILED=$(jq -r '.stats.unexpected // 0' test-results.json 2>/dev/null || echo "0")
+            SKIPPED=$(jq -r '.stats.skipped // 0' test-results.json 2>/dev/null || echo "0")
           else
             PASSED=0
             FAILED=0
