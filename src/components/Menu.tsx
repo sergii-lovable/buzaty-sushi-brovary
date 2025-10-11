@@ -400,7 +400,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
           <TabsTrigger value="krim-sushi">Суші / Крім-суші</TabsTrigger>
           <TabsTrigger value="futo-maki">Макі / Футо-макі</TabsTrigger>
           <TabsTrigger value="original">Оригінальні роли</TabsTrigger>
-          <TabsTrigger value="salat">Салат</TabsTrigger>
+          <TabsTrigger value="salat">Салат Чука</TabsTrigger>
           <TabsTrigger value="drinks">Напої</TabsTrigger>      
         </TabsList>
 
