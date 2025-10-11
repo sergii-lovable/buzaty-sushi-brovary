@@ -102,14 +102,6 @@ const menuItems: MenuItemType[] = [
     category: "rolls"
   },
   {
-    id: 13,
-    name: "Каліфорнія з креветкою в кунжуті",
-    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
-    price: 209,
-    image: sushiRollImage,
-    category: "rolls"
-  },
-  {
     id: 14,
     name: "Канада",
     description: "Вугор, крем-сир, огірок, тамаго, краб-кейк, кунжут, рис, норі, унагі соус",
@@ -231,7 +223,15 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "nigiri"
   },
- // Салат
+ // Каліфорнія меню
+   {
+    id: 13,
+    name: "Каліфорнія з креветкою в кунжуті",
+    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    price: 209,
+    image: sushiRollImage,
+    category: "kalifornija"
+  },
   {
     id: 29,
     name: "Салат Чука",
