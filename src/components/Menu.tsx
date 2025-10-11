@@ -189,7 +189,7 @@ const menuItems: MenuItemType[] = [
     description: "Лосось, огірок, тамаго, ікра масаго, рис, норі, унагі соус, кунжут, сирний соус",
     price: 229,
     image: sushiRollImage,
-    category: "nigiri"
+    category: "zapecheni"
   },
   {
     id: 27,
@@ -197,7 +197,7 @@ const menuItems: MenuItemType[] = [
     description: "Курка теріякі, крем-сир, тамаго, ананас, унагі соус, кунжут, рис, норі, сирний соус",
     price: 189,
     image: sushiRollImage,
-    category: "nigiri"
+    category: "zapecheni"
   },
   {
     id: 28,
@@ -205,7 +205,7 @@ const menuItems: MenuItemType[] = [
     description: "Мідії копчені, бекон, тамаго, унагі соус, рис, норі, кунжут, сирний соус",
     price: 199,
     image: sushiRollImage,
-    category: "nigiri"
+    category: "zapecheni"
   },
  // Каліфорнія меню
    {
