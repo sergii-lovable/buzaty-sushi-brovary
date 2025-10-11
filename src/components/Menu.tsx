@@ -323,11 +323,11 @@ const menuItems: MenuItemType[] = [
   // Суші / крім-суші
   {
     id: 30,
-    name: "Сашимі з лосося",
-    description: "8 шт свіжого філе лосося, імбир, васабі, соєвий соус",
-    price: 199,
+    name: "Лосось",
+    description: "Лосось, рис",
+    price: 49,
     image: sushiRollImage,
-    category: "sashimi"
+    category: "krim-sushi"
   },
   {
     id: 31,
