@@ -401,14 +401,14 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "krim-sushi"
   },
-  // Чіз роли
+  // Макі / футо-макі
   {
     id: 33,
     name: "Нігірі з лососем",
     description: "2 шт свіжого лосося на рисі з васабі",
     price: 89,
     image: sushiRollImage,
-    category: "nigiri-sushi"
+    category: "futo-maki"
   },
   {
     id: 34,
