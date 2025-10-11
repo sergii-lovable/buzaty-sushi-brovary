@@ -97,3 +97,53 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Responsive tab scrolling styles */
+@media (max-width: 767px) {
+  .tabs-scroll-container {
+    position: relative;
+  }
+  
+  .tabs-scroll-container::before,
+  .tabs-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .tabs-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, hsl(var(--background)), transparent);
+  }
+  
+  .tabs-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, hsl(var(--background)), transparent);
+  }
+}
+
+/* Force grid layout on small screens for category tabs */
+@media (max-width: 767px) {
+  [role="tablist"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 4px !important;
+    overflow: visible !important;
+  }
+}
+
+/* Allow tablist height to expand for multi-row layouts */
+[role="tablist"] {
+  height: auto !important;
+  min-height: 40px !important;
+}
+
+/* Prevent text overflow on all screen sizes */
+[role="tab"] {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}

@@ -38,6 +38,22 @@ Users on mobile devices and small screens need category tabs that don't overlap 
 
 ---
 
+### User Story 3 - Complete Category Visibility (Priority: P1)
+
+Users need to see ALL menu categories simultaneously on any screen width without having to scroll horizontally or having categories hidden from view.
+
+**Why this priority**: Critical for discoverability - users must be able to see all available categories at once to make informed choices about what to browse.
+
+**Independent Test**: Can be fully tested by resizing browser window to any width and verifying all 10+ category tabs are visible without horizontal scrolling.
+
+**Acceptance Scenarios**:
+
+1. **Given** a user is viewing the menu on any screen width, **When** they look at the category tabs, **Then** ALL categories are visible simultaneously without horizontal scrolling
+2. **Given** a user is on a very narrow screen (320px), **When** they view the menu, **Then** all category tabs are displayed using appropriate responsive techniques (e.g., multi-row layout, abbreviated text, or smaller tabs)
+3. **Given** a user is browsing on any device, **When** they access the menu, **Then** no categories are hidden or require scrolling to access
+
+---
+
 ### Edge Cases
 
 - What happens when category names are very long on extremely narrow screens?
@@ -55,6 +71,9 @@ Users on mobile devices and small screens need category tabs that don't overlap 
 - **FR-005**: System MUST adapt category tab layout responsively to prevent overlap on screens narrower than 768px
 - **FR-006**: System MUST implement text truncation or abbreviation for category names longer than 15 characters on small screens
 - **FR-007**: System MUST ensure all category tabs remain fully visible and clickable without horizontal scrolling on screens as narrow as 320px
+- **FR-008**: System MUST display ALL category tabs simultaneously on any screen width without requiring horizontal scrolling or hiding categories
+- **FR-009**: System MUST prevent text overflow and overlapping in category tabs on all screen widths, particularly at intermediate widths (600-800px)
+- **FR-010**: System MUST prevent vertical overlap between tab rows in multi-row layouts, ensuring proper spacing between rows at all screen widths
 
 ### Key Entities *(include if feature involves data)*
 
@@ -72,6 +91,9 @@ Users on mobile devices and small screens need category tabs that don't overlap 
 - **SC-004**: Touch targets for category tabs meet minimum 44px accessibility guidelines on mobile devices
 - **SC-005**: Menu layout adapts responsively without horizontal scrolling or content cutoff on small screens, with text truncation for long category names
 - **SC-006**: Category tabs display readable text with minimum 8px character width on all screen sizes from 320px to 1200px width
+- **SC-007**: ALL category tabs are simultaneously visible and accessible on any screen width without horizontal scrolling or hidden categories
+- **SC-008**: Category tab text does not overflow or overlap on any screen width, with proper text ellipsis applied when necessary
+- **SC-009**: Tab rows do not overlap vertically in multi-row layouts, with proper spacing maintained between rows on all screen sizes
 
 ## Assumptions
 
