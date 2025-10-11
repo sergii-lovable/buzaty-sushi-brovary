@@ -394,7 +394,7 @@ const Menu = ({ onAddToCart }: MenuProps) => {
         <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-5 mb-8" role="tablist" aria-label="Категорії меню">
           <TabsTrigger value="all">Всі</TabsTrigger>
           <TabsTrigger value="rolls">Філадельфія меню</TabsTrigger>
-          <TabsTrigger value="sets">Сети</TabsTrigger>
+          <TabsTrigger value="sets">Набори / Сети</TabsTrigger>
           <TabsTrigger value="nigiri">Запечені</TabsTrigger>
           <TabsTrigger value="salat">Салат</TabsTrigger>
           <TabsTrigger value="sashimi">Сашимі</TabsTrigger>
