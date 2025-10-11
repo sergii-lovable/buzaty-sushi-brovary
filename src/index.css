@@ -97,3 +97,89 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Responsive tab scrolling styles */
+@media (max-width: 767px) {
+  .tabs-scroll-container {
+    position: relative;
+  }
+  
+  .tabs-scroll-container::before,
+  .tabs-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .tabs-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, hsl(var(--background)), transparent);
+  }
+  
+  .tabs-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, hsl(var(--background)), transparent);
+  }
+}
+
+/* Force grid layout on small screens for category tabs */
+@media (max-width: 767px) {
+  [role="tablist"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 4px !important;
+    row-gap: 12px !important;
+    overflow: visible !important;
+  }
+}
+
+/* Allow tablist height to expand for multi-row layouts */
+[role="tablist"] {
+  height: auto !important;
+  min-height: 40px !important;
+  row-gap: 12px;
+}
+
+/* Prevent text overflow on all screen sizes */
+[role="tab"] {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Add visual row separation with alternating background shades */
+[role="tab"]:nth-child(n+1):nth-child(-n+5) {
+  /* Row 1 - default background */
+}
+
+@media (max-width: 767px) {
+  /* Small screens: 2 columns, so rows are: 1-2, 3-4, 5-6, 7-8, 9-10 */
+  [role="tab"]:nth-child(n+3):nth-child(-n+4) {
+    /* Row 2 */
+    background-color: hsl(var(--muted) / 0.5) !important;
+  }
+  
+  [role="tab"]:nth-child(n+5):nth-child(-n+6) {
+    /* Row 3 - default background */
+  }
+  
+  [role="tab"]:nth-child(n+7):nth-child(-n+8) {
+    /* Row 4 */
+    background-color: hsl(var(--muted) / 0.5) !important;
+  }
+  
+  [role="tab"]:nth-child(n+9):nth-child(-n+10) {
+    /* Row 5 - default background */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Larger screens: 5 columns, so rows are: 1-5, 6-10 */
+  [role="tab"]:nth-child(n+6):nth-child(-n+10) {
+    /* Row 2 */
+    background-color: hsl(var(--muted) / 0.5) !important;
+  }
+}
