@@ -231,15 +231,7 @@ const menuItems: MenuItemType[] = [
     price: 209,
     image: sushiRollImage,
     category: "kalifornija"
-  },
-  {
-    id: 29,
-    name: "Салат Чука",
-    description: "Класичний японський салат із водоростей з горіховим соусом",
-    price: 129,
-    image: sushiRollImage,
-    category: "salat"
-  },
+  },  
   // Каліфорнія меню
   {
     id: 30,
@@ -323,14 +315,14 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "gunkan"
   },
-  // Футо-макі
+  // Салат Чука
   {
-    id: 40,
-    name: "Місо суп",
-    description: "Традиційний японський суп з місо пастою, тофу, водорості вакаме",
-    price: 79,
+    id: 29,
+    name: "Салат Чука",
+    description: "Класичний японський салат із водоростей з горіховим соусом",
+    price: 129,
     image: sushiRollImage,
-    category: "soup"
+    category: "salat"
   },
   {
     id: 41,
