@@ -611,7 +611,7 @@ const menuItems: MenuItemType[] = [
     description: "Класична кола в банці",
     price: 40,
     image: sushiRollImage,
-    category: "drinks"
+    category: "drinks1"
   },
 ];
 
