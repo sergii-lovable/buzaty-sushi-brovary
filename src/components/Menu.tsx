@@ -434,6 +434,54 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "futo-maki"
   },
+  {
+    id: 54,
+    name: "Макі вершковий лосось",
+    description: "Лосось, крем-сир, рис, норі",
+    price: 109,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 55,
+    name: "Макі тунець",
+    description: "Тунець, рис, норі",
+    price: 99,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 56,
+    name: "Макі лосось слабосолений",
+    description: "Лосось с/с, рис, норі",
+    price: 109,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 57,
+    name: "Макі лосось хіяші",
+    description: "Лосось, чука, горіховий соус, кунжут, рис, норі",
+    price: 109,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 58,
+    name: "Макі вугор",
+    description: "Вугор, унагі соус, кунжут, рис, норі",
+    price: 129,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 60,
+    name: "Макі вершкова креветка",
+    description: "Креветка, крем-сир, рис, норі",
+    price: 119,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
   // Оригінальні роли
   {
     id: 14,
