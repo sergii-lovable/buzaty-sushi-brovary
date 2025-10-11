@@ -482,9 +482,57 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "futo-maki"
   },
-  // Оригінальні роли / ЧІЗ РОЛИ
   {
     id: 61,
+    name: "Рол овочевий",
+    description: "Листя салату, огірок, помідор, рис, норі",
+    price: 169,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 62,
+    name: "Бостон",
+    description: "Лосось, крем-сир, огірок, листя салату, рис, норі",
+    price: 199,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 63,
+    name: "Норвезький",
+    description: "Креветка, огірок, крем-сир, ікра масаго, рис, норі",
+    price: 229,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 64,
+    name: "Біг рол з тунцем спайсі",
+    description: "Тунець спайсі, салат, помідор, майонез, рис, норі",
+    price: 209,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 65,
+    name: "Біг рол з лососем слабосоленим",
+    description: "Лосось с/с, майонез, огірок, рис, норі",
+    price: 219,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  {
+    id: 66,
+    name: "Біг рол з лососем і тунцем теріякі",
+    description: "Лосось, тунець теріякі, огірок, салат, майонез, рис, норі",
+    price: 219,
+    image: sushiRollImage,
+    category: "futo-maki"
+  },
+  // Оригінальні роли / ЧІЗ РОЛИ
+  {
+    id: 67,
     name: "Канада",
     description: "Вугор, крем-сир, огірок, тамаго, краб-кейк, кунжут, рис, норі, унагі соус",
     price: 209,
@@ -492,7 +540,7 @@ const menuItems: MenuItemType[] = [
     category: "original"
   },
   {
-    id: 62,
+    id: 68,
     name: "Лава Чіз Торі",
     description: "Курка теріякі, крем-сир, тамаго, соус лава, рис, норі",
     price: 189,
@@ -500,7 +548,7 @@ const menuItems: MenuItemType[] = [
     category: "original"
   },
   {
-    id: 63,
+    id: 69,
     name: "Ніжність",
     description: "Лосось, крем-сир, тамаго, крабовий соус, рис, норі",
     price: 209,
@@ -508,7 +556,7 @@ const menuItems: MenuItemType[] = [
     category: "original"
   },
   {
-    id: 64,
+    id: 70,
     name: "Осака",
     description: "Лосось с/с, креветка, ікра масаго, крем-сир, огірок, рис, норі",
     price: 229,
@@ -516,7 +564,7 @@ const menuItems: MenuItemType[] = [
     category: "original"
   },
   {
-    id: 65,
+    id: 71,
     name: "Червоний дракон",
     description: "Вугор, лосось, тамаго, авокадо, ікра масаго, майонез, рис, норі",
     price: 309,
@@ -524,7 +572,7 @@ const menuItems: MenuItemType[] = [
     category: "original"
   },
   {
-    id: 66,
+    id: 72,
     name: "Чіз рол з лососем",
     description: "Лосось, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
     price: 199,
@@ -532,7 +580,7 @@ const menuItems: MenuItemType[] = [
     category: "original"
   },
   {
-    id: 67,
+    id: 73,
     name: "Чіз рол з креветкою",
     description: "Креветка, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
     price: 229,
@@ -540,7 +588,7 @@ const menuItems: MenuItemType[] = [
     category: "original"
   },
   {
-    id: 68,
+    id: 74,
     name: "Чіз рол з вугрем",
     description: "Вугор, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
     price: 239,
@@ -549,7 +597,7 @@ const menuItems: MenuItemType[] = [
   },
    // Салат Чука
   {
-    id: 29,
+    id: 75,
     name: "Салат Чука",
     description: "Класичний японський салат із водоростей з горіховим соусом",
     price: 129,
@@ -558,7 +606,7 @@ const menuItems: MenuItemType[] = [
   },
    // Напої
   {
-    id: 43,
+    id: 76,
     name: "Coca-Cola 0.33л",
     description: "Класична кола в банці",
     price: 40,
