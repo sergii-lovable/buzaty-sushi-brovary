@@ -74,6 +74,7 @@ Users need to see ALL menu categories simultaneously on any screen width without
 - **FR-008**: System MUST display ALL category tabs simultaneously on any screen width without requiring horizontal scrolling or hiding categories
 - **FR-009**: System MUST prevent text overflow and overlapping in category tabs on all screen widths, particularly at intermediate widths (600-800px)
 - **FR-010**: System MUST prevent vertical overlap between tab rows in multi-row layouts, ensuring proper spacing between rows at all screen widths
+- **FR-011**: System MUST provide clear visual separation between tab rows in multi-row layouts using alternating background colors and 12px row gap for improved readability
 
 ### Key Entities *(include if feature involves data)*
 
@@ -94,6 +95,7 @@ Users need to see ALL menu categories simultaneously on any screen width without
 - **SC-007**: ALL category tabs are simultaneously visible and accessible on any screen width without horizontal scrolling or hidden categories
 - **SC-008**: Category tab text does not overflow or overlap on any screen width, with proper text ellipsis applied when necessary
 - **SC-009**: Tab rows do not overlap vertically in multi-row layouts, with proper spacing maintained between rows on all screen sizes
+- **SC-010**: Multi-row tab layouts display clear visual separation with alternating background colors and 12px row gap for improved readability and visual hierarchy
 
 ## Assumptions
 
