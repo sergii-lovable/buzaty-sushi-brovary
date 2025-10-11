@@ -19,21 +19,6 @@ Modern sushi restaurant website with online ordering and delivery for Brovary, U
 - ♿ Accessibility features (ARIA labels, semantic HTML)
 - 🔍 SEO optimized with structured data
 
-### Menu Categories
-
-1. **Роли** (Rolls) - 15 items including Philadelphia, California, Canada
-2. **Сети** (Sets) - 10 combo sets
-3. **Запечені** (Baked Rolls) - 3 baked specialties
-4. **Салат** (Salad) - Chuka seaweed salad
-5. **Сашимі** (Sashimi) - 3 varieties
-6. **Нігірі** (Nigiri Sushi) - 4 types
-7. **Гункани** (Gunkan) - 3 options
-8. **Супи** (Soups) - Miso, Tom Yam, Ramen
-9. **Напої** (Drinks) - Beverages
-10. **Міні роли / Макі** (Mini Rolls / Maki)
-11. **Суші та крім-суші** (Sushi & Cream Sushi)
-12. **Всі** (All) - View all items
-
 ### Contact Information
 
 - 📍 **Address**: м. Бровари, вул. Грушевського 7
