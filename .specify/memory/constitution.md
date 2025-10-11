@@ -1,14 +1,14 @@
 <!--
 Sync Impact Report
-- Version change: template → 1.0.0
-- Modified principles: n/a (initial version)
-- Added sections: 8 core principles, Performance Standards, Development Workflow, Governance
-- Removed sections: Generic placeholders
+- Version change: 1.2.0 → 1.3.0
+- Modified principles: Testing Strategy (added mandatory 100% test pass requirement)
+- Added sections: Test Execution Requirements (5 mandatory rules)
+- Removed sections: n/a
 - Templates requiring updates:
+  ⚠️ spec-template.md: Add "Test Results" section to track pass/fail/skipped counts
+  ⚠️ tasks-template.md: Update to emphasize zero failures/skipped tests requirement
   ✅ plan-template.md: Constitution Check section aligned
-  ✅ spec-template.md: Requirements section aligned
-  ✅ tasks-template.md: Test-optional approach aligned
-- Follow-up TODOs: Monitor Core Web Vitals quarterly; Add accessibility audit checklist
+- Follow-up TODOs: Update CI/CD pipeline to enforce test pass requirement; Add pre-commit hook for test execution
 -->
 
 # Пузаті суші (Buzaty Sushi Brovary) Constitution
@@ -80,13 +80,24 @@ Avoid premature abstraction. Components SHOULD be colocated with usage. State ma
 
 ### Testing Strategy
 
+- **Automated tests MUST pass 100%** - No failed or skipped tests allowed in any spec implementation
 - Manual testing of order flow (add to cart → checkout → form submission) REQUIRED before each release
 - **Playwright visual verification REQUIRED** for all UI changes affecting layout, spacing, or responsive behavior
 - Accessibility spot-checks using axe DevTools or Lighthouse RECOMMENDED
 - Automated E2E tests are OPTIONAL (not mandatory for this project size)
 
+#### Test Execution Requirements
+
+**MANDATORY** for every spec implementation:
+1. **All tests MUST pass** - 100% pass rate required
+2. **Zero failed tests** - Any test failure must be fixed before completion
+3. **Zero skipped tests** - Tests must not be skipped unless properly removed/commented with justification
+4. **Test results MUST be documented** - Include pass/fail counts in implementation summary
+5. **Run tests before marking spec complete** - `npm run test` must be executed and pass
+
 ### Quality Gates
 
+- `npm run test` MUST pass with 100% pass rate (no failures, no skipped tests)
 - `npm run lint` MUST pass
 - No TypeScript errors (`tsc --noEmit`)
 - Visual review on mobile (375px) and desktop (1280px)
@@ -209,7 +220,8 @@ This constitution supersedes all other development practices. PRs that violate p
 
 ---
 
-**Version**: 1.2.0 | **Ratified**: 2025-10-10 | **Last Amended**: 2024-12-19  
+**Version**: 1.3.0 | **Ratified**: 2025-10-10 | **Last Amended**: 2025-01-11  
 **Change Log**: 
+- v1.3.0 - Added "Test Execution Requirements" mandating 100% test pass rate with zero failures or skipped tests for every spec implementation
 - v1.2.0 - Added "Playwright Visual Verification Requirements" section mandating automated visual testing for all UI changes
 - v1.1.0 - Added "Deployment & Hosting" section documenting GitHub Pages static hosting requirements and build-time feature guidance

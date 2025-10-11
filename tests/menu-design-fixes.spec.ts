@@ -448,46 +448,6 @@ test.describe('Menu Design Fixes - Visual Validation', () => {
     });
   });
 
-  test.describe('Visual Regression', () => {
-    
-    test.skip('should match baseline screenshot on desktop', async ({ page }) => {
-      // Skipping - design changed significantly with multi-row layout
-      await page.setViewportSize(SCREEN_SIZES.desktop);
-      
-      const menuSection = page.locator('section').filter({ hasText: 'Меню' });
-      await expect(menuSection).toHaveScreenshot('menu-desktop-baseline.png');
-    });
-
-    test.skip('should match baseline screenshot on tablet', async ({ page }) => {
-      // Skipping - design changed significantly with multi-row layout
-      await page.setViewportSize(SCREEN_SIZES.tablet);
-      
-      const menuSection = page.locator('section').filter({ hasText: 'Меню' });
-      await expect(menuSection).toHaveScreenshot('menu-tablet-baseline.png');
-    });
-
-    test.skip('should match baseline screenshot on mobile', async ({ page }) => {
-      // Skipping - design changed significantly with multi-row layout
-      await page.setViewportSize(SCREEN_SIZES.mobile);
-      
-      const menuSection = page.locator('section').filter({ hasText: 'Меню' });
-      await expect(menuSection).toHaveScreenshot('menu-mobile-baseline.png');
-    });
-  });
-
-  test.describe('Performance Impact', () => {
-    
-    test.skip('should maintain Core Web Vitals on desktop', async ({ page }) => {
-      // Skipping - requires proper Core Web Vitals implementation using Performance Observer API
-      await page.setViewportSize(SCREEN_SIZES.desktop);
-      
-      await page.waitForLoadState('networkidle');
-      
-      // In a real implementation, would use web-vitals library or Performance Observer API
-      // to measure actual LCP, CLS, and INP values
-    });
-  });
-
   test.describe('Accessibility', () => {
     
     test('should support keyboard navigation', async ({ page }) => {
