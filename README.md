@@ -1,5 +1,9 @@
 # 🍣 Пузаті суші - Brovary
 
+[![Deploy to GitHub Pages](https://github.com/sergii-lovable/buzaty-sushi-brovary/actions/workflows/deploy.yml/badge.svg)](https://github.com/sergii-lovable/buzaty-sushi-brovary/actions/workflows/deploy.yml)
+[![Tests](https://img.shields.io/badge/tests-105%20passing-brightgreen)](https://github.com/sergii-lovable/buzaty-sushi-brovary/actions/workflows/deploy.yml)
+[![Playwright](https://img.shields.io/badge/playwright-5%20browsers-blue)](https://playwright.dev/)
+
 Modern sushi restaurant website with online ordering and delivery for Brovary, Ukraine.
 
 **Live Site**: [puzatisushi.com.ua](https://puzatisushi.com.ua)
@@ -48,6 +52,8 @@ This project is built with modern web technologies:
 - **Routing**: React Router DOM 6.30
 - **State Management**: React hooks (useState)
 - **Forms**: React Hook Form + Zod validation
+- **Testing**: Playwright (E2E + Visual Regression)
+- **CI/CD**: GitHub Actions
 - **Build Automation**: Custom Vite plugin for noscript generation
 
 ### 🔧 Automated Noscript Generation
@@ -127,9 +133,50 @@ Work locally with your preferred IDE (VS Code, WebStorm, etc.). All changes push
   "build:dev": "vite build --mode development",
   "lint": "eslint .",              // Run linter
   "preview": "vite preview",        // Preview production build
+  "test": "playwright test",        // Run all tests
+  "test:ui": "playwright test --ui", // Run tests with UI
+  "test:headed": "playwright test --headed", // Run tests in headed mode
+  "test:debug": "playwright test --debug",   // Debug tests
   "deploy": "npm run build && cp CNAME dist/ && gh-pages -d dist"
 }
 ```
+
+## 🧪 Testing
+
+This project includes comprehensive end-to-end testing with Playwright.
+
+### Test Coverage
+
+- **105 tests** across 5 browsers
+- **Browsers tested**: Chromium, Firefox, WebKit, Mobile Chrome, Mobile Safari
+- **Test types**: Functionality tests, visual regression tests, accessibility tests
+- **Test areas**: Homepage, menu design, responsive layouts, touch targets, text readability
+
+### Running Tests
+
+```sh
+# Run all tests
+npm test
+
+# Run tests with UI (interactive mode)
+npm run test:ui
+
+# Run tests in headed mode (see browser)
+npm run test:headed
+
+# Debug tests
+npm run test:debug
+
+# View last test report
+npx playwright show-report
+```
+
+### Test Reports
+
+- Console output shows real-time test results
+- HTML reports are generated in `playwright-report/`
+- Screenshots and videos captured on failure
+- Test traces available for debugging
 
 ## 📁 Project Structure
 
@@ -223,7 +270,11 @@ www.puzatisushi.com.ua CNAME <your-github-username>.github.io
 
 Every push to the `main` branch will automatically trigger a deployment via GitHub Actions. The workflow will:
 1. Build the project
-2. Copy the CNAME file
-3. Deploy to GitHub Pages
+2. Run 105 Playwright tests across 5 browsers (Chromium, Firefox, WebKit, Mobile Chrome, Mobile Safari)
+3. Upload test reports as artifacts
+4. Copy the CNAME file
+5. Deploy to GitHub Pages (only if all tests pass)
 
-You can also manually trigger a deployment from the **Actions** tab in GitHub.
+**Quality Gate**: Deployment is blocked if any tests fail, ensuring only tested code reaches production.
+
+You can also manually trigger a deployment from the **Actions** tab in GitHub. Test reports are available as downloadable artifacts in the workflow run details.
