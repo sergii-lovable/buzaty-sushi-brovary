@@ -207,6 +207,30 @@ const menuItems: MenuItemType[] = [
     image: sushiRollImage,
     category: "zapecheni"
   },
+  {
+    id: 28,
+    name: "Запечений з тунцем теріякі",
+    description: "Тунець теріякі, тамаго, огірок, унагі соус, рис, норі, кунжут, сирний соус",
+    price: 199,
+    image: sushiRollImage,
+    category: "zapecheni"
+  },
+  {
+    id: 28,
+    name: "Запечений Філадельфія",
+    description: "Лосось, крем-сир, тамаго, огірок, унагі соус, рис, норі, кунжут, сирний соус",
+    price: 209,
+    image: sushiRollImage,
+    category: "zapecheni"
+  },
+  {
+    id: 28,
+    name: "Запечений з вугрем",
+    description: "Вугор, тамаго, авокадо, крем-сир, унагі соус, рис, норі, кунжут, сирний соус",
+    price: 239,
+    image: sushiRollImage,
+    category: "zapecheni"
+  },
  // Каліфорнія меню
    {
     id: 13,
