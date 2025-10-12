@@ -41,7 +41,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія Дабл з лососем",
     description: "Лосось - подвійна порція, крем-сир, авокадо, рис, норі",
     price: 349,
-    image: "/images/Філадельфія Дабл з лососем.png",
+    image: "/images/Філадельфія Дабл.png",
     category: "rolls"
   },
   {
