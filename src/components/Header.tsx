@@ -15,9 +15,16 @@ const Header = ({ cartCount, onCartClick }: HeaderProps) => {
           <span className="text-2xl" role="img" aria-label="Суші">🍣</span>
           <div>
             <h1 className="text-xl font-bold text-primary">Пузаті суші</h1>
-            <p className="text-xs text-muted-foreground" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-              <span itemProp="addressLocality">м. Бровари, вул. Грушевського 7 +38 (077) 172  07  07</span>
-            </p>
+            <div className="text-xs text-muted-foreground" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+              <div itemProp="addressLocality">м. Бровари, вул. Грушевського 7</div>
+              <a 
+                href="tel:+380771720707" 
+                className="hover:text-primary transition-colors"
+                itemProp="telephone"
+              >
+                +38 (077) 172 07 07
+              </a>
+            </div>
           </div>
         </div>
         
