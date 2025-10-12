@@ -49,7 +49,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія Грін",
     description: "Водорості, горіховий соус, кунжут, крем-сир, огірок, рис, норі",
     price: 189,
-    image: "/images/Філадельфія Грін.png",
+    image: "/images/fil_grin2-900x600 (1).png",
     category: "rolls"
   },
   {
