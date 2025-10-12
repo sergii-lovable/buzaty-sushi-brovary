@@ -9,7 +9,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія",
     description: "Лосось, крем-сир, огірок, рис, норі",
     price: 219,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія.png",
     category: "rolls"
   },
   {
