@@ -89,7 +89,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія 50/50",
     description: "Лосось, вугор, крем-сир, огірок, унагі соус, рис, норі",
     price: 259,
-    image: "/images/Філадельфія 50х50.png",
+    image: "/images/fil_miks3-900x600.png",
     category: "rolls"
   },
   {
@@ -97,7 +97,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з вугрем",
     description: "Вугор, крем-сир, огірок, унагі соус, кунжут, рис, норі",
     price: 249,
-    image: "/images/Філадельфія з вугрем.png",
+    image: "/images/fil_unagi2-900x600.png",
     category: "rolls"
   },  
    // Набори / Сети
