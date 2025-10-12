@@ -322,7 +322,7 @@ const menuItems: MenuItemType[] = [
   // Суші / крім-суші
   {
     id: 40,
-    name: "Суші-Лосось",
+    name: "Суші лосось",
     description: "Лосось, рис",
     price: 49,
     image: "/images/sushi-roll.jpg",
@@ -330,7 +330,7 @@ const menuItems: MenuItemType[] = [
   },
  {
     id: 41,
-    name: "Суші-Лосось слабосолений",
+    name: "Суші лосось слабосолений",
     description: "Лосось с/с, рис",
     price: 59,
     image: "/images/sushi-roll.jpg",
@@ -338,7 +338,7 @@ const menuItems: MenuItemType[] = [
   },
  {
     id: 42,
-    name: "Креветка",
+    name: "Суші креветка",
     description: "Креветка, рис",
     price: 59,
     image: "/images/sushi-roll.jpg",
@@ -346,7 +346,7 @@ const menuItems: MenuItemType[] = [
   },
   {
     id: 43,
-    name: "Тунець",
+    name: "Суші тунець",
     description: "Тунець, рис",
     price: 49,
     image: "/images/sushi-roll.jpg",
@@ -354,7 +354,7 @@ const menuItems: MenuItemType[] = [
   },
   {
     id: 44,
-    name: "Вугор",
+    name: "Суші вугор",
     description: "Вугор, рис, унагі соус, кунжут",
     price: 69,
     image: "/images/sushi-roll.jpg",
