@@ -17,7 +17,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія Люкс",
     description: "Лосось, крем-сир, авокадо, ікра масаго, рис, норі",
     price: 249,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія Люкс.png",
     category: "rolls"
   },
   {
@@ -25,7 +25,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з лососем та креветкою",
     description: "Лосось, креветка, крем-сир, авокадо, рис, норі",
     price: 309,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія з лососем та креветкою.jpg",
     category: "rolls"
   },
   {
@@ -33,7 +33,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з лососем слабосоленим",
     description: "Лосось с/с, крем-сир, огірок, ікра масаго, рис, норі",
     price: 239,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія з лососем слабосоленим .png",
     category: "rolls"
   },
   {
@@ -41,7 +41,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія Дабл з лососем",
     description: "Лосось - подвійна порція, крем-сир, авокадо, рис, норі",
     price: 349,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія Дабл з лососем.png",
     category: "rolls"
   },
   {
@@ -49,7 +49,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія Грін",
     description: "Водорості, горіховий соус, кунжут, крем-сир, огірок, рис, норі",
     price: 189,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія Грін.png",
     category: "rolls"
   },
   {
@@ -57,7 +57,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з беконом",
     description: "Бекон, крем-сир, помідор, рис, норі",
     price: 189,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія з беконом.png",
     category: "rolls"
   },
   {
@@ -65,7 +65,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з авокадо",
     description: "Авокадо, лосось, крем-сир, огірок, унагі соус, рис, норі",
     price: 209,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія з авокадо.png",
     category: "rolls"
   },
   {
@@ -73,7 +73,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з тунцем",
     description: "Тунець, крем-сир, огірок, ікра масаго, рис, норі",
     price: 199,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія з тунцем.png",
     category: "rolls"
   },
   {
@@ -81,7 +81,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з лососем і тунцем",
     description: "Лосось, тунець, крем-сир, авокадо, ікра масаго, рис, норі",
     price: 309,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія з лососем і тунцем.jpg",
     category: "rolls"
   },
   {
@@ -89,7 +89,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія 50/50",
     description: "Лосось, вугор, крем-сир, огірок, унагі соус, рис, норі",
     price: 259,
-    image: "/images/Filadelfia 50х50.png",
+    image: "/images/Філадельфія 50х50.png",
     category: "rolls"
   },
   {
@@ -97,7 +97,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з вугрем",
     description: "Вугор, крем-сир, огірок, унагі соус, кунжут, рис, норі",
     price: 249,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія з вугрем.png",
     category: "rolls"
   },  
    // Набори / Сети
