@@ -16,7 +16,7 @@ const Header = ({ cartCount, onCartClick }: HeaderProps) => {
           <div>
             <h1 className="text-xl font-bold text-primary">Пузаті суші</h1>
             <p className="text-xs text-muted-foreground" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-              <span itemProp="addressLocality">м. Бровари, вул. Грушевського 7  +38(077)172-07-07</span>
+              <span itemProp="addressLocality">м. Бровари, вул. Грушевського 7                  +38 (077) 172  07  07</span>
             </p>
           </div>
         </div>
