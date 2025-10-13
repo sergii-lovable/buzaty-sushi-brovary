@@ -65,7 +65,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з авокадо",
     description: "Авокадо, лосось, крем-сир, огірок, унагі соус, рис, норі",
     price: 209,
-    image: "/images/fil_avokado2-900x600.png",
+    image: "/images/Філадельфія Авокадо 2.jpg",
     category: "rolls"
   },
   {
