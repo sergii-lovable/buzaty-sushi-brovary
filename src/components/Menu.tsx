@@ -187,7 +187,7 @@ const menuItems: MenuItemType[] = [
     name: "Запечений з лососем",
     description: "Лосось, огірок, тамаго, ікра масаго, рис, норі, унагі соус, кунжут, сирний соус",
     price: 229,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Запечений з лососем.jpg",
     category: "zapecheni"
   },
   {
