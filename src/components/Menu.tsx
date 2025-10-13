@@ -105,7 +105,7 @@ const menuItems: MenuItemType[] = [
     id: 13,
     name: "Сет 'Суші Мікс'",
     description: "20 шт / 405 гр: Філадельфія 1/2, Каліфорнія з лососем в ікрі 1/2, Каліфорнія з крабом в кунжуті 1/2, Макі огірок",
-    price: 319,
+    price: 369,
     image: "/images/sushi-roll.jpg",
     category: "sets"
   },
@@ -113,7 +113,7 @@ const menuItems: MenuItemType[] = [
     id: 14,
     name: "Сет 'Фієста'",
     description: "20 шт / 480 гр: Філадельфія 1/2, Каліфорнія з крабом в ікрі 1/2, Каліфорнія з тунцем теріякі 1/2, Лавв Чіз Торі 1/2, Макі вершковий лосось 1/2",
-    price: 319,
+    price: 369,
     image: "/images/sushi-roll.jpg",
     category: "sets"
   },
