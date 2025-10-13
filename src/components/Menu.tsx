@@ -486,7 +486,7 @@ const menuItems: MenuItemType[] = [
     name: "Рол овочевий",
     description: "Листя салату, огірок, помідор, рис, норі",
     price: 169,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Рол овочевий.png",
     category: "futo-maki"
   },
   {
