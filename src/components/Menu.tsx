@@ -478,7 +478,7 @@ const menuItems: MenuItemType[] = [
     name: "Макі вершкова креветка",
     description: "Креветка, крем-сир, рис, норі",
     price: 119,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Макі вершкова креветка.png",
     category: "futo-maki"
   },
   {
