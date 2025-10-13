@@ -97,7 +97,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з вугрем",
     description: "Вугор, крем-сир, огірок, унагі соус, кунжут, рис, норі",
     price: 249,
-    image: "/images/Філадельфія з вугрем.png",
+    image: "/images/Філадельфія з вугрем2.png",
     category: "rolls"
   },  
    // Набори / Сети
