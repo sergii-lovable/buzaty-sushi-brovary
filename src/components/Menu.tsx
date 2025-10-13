@@ -203,7 +203,7 @@ const menuItems: MenuItemType[] = [
     name: "Запечений з мідіями і беконом",
     description: "Мідії копчені, бекон, тамаго, унагі соус, рис, норі, кунжут, сирний соус",
     price: 199,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Запечений з мідіями і беконом.jpg",
     category: "zapecheni"
   },
   {
