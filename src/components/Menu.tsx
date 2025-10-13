@@ -438,7 +438,7 @@ const menuItems: MenuItemType[] = [
     name: "Макі вершковий лосось",
     description: "Лосось, крем-сир, рис, норі",
     price: 109,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Макі вершковий лосось.png",
     category: "futo-maki"
   },
   {
