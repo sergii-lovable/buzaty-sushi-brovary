@@ -365,7 +365,7 @@ const menuItems: MenuItemType[] = [
     name: "Крім-суші з лососем",
     description: "Лосось, рис, крем-сир, норі",
     price: 49,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Крім-суші з лососем.png",
     category: "krim-sushi"
   },
   {
