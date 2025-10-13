@@ -494,7 +494,7 @@ const menuItems: MenuItemType[] = [
     name: "Бостон",
     description: "Лосось, крем-сир, огірок, листя салату, рис, норі",
     price: 199,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Бостон.jpg",
     category: "futo-maki"
   },
   {
