@@ -397,7 +397,7 @@ const menuItems: MenuItemType[] = [
     name: "Крім-суші з вугрем",
     description: "Вугор рис, крем-сир, норі, унагі соус, кунжут",
     price: 69,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Крім-суші з вугрем.png",
     category: "krim-sushi"
   },
   // Макі / футо-макі
