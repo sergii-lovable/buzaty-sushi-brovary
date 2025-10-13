@@ -17,7 +17,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія Люкс",
     description: "Лосось, крем-сир, авокадо, ікра масаго, рис, норі",
     price: 249,
-    image: "/images/Філадельфія Люкс 2.jpg",
+    image: "/images/Філадельфія з лососем слабосоленим .png",
     category: "rolls"
   },
   {
@@ -33,7 +33,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з лососем слабосоленим",
     description: "Лосось с/с, крем-сир, огірок, ікра масаго, рис, норі",
     price: 239,
-    image: "/images/Філадельфія Люкс 2.jpg",
+    image: "/images/Філадельфія з лососем слабосоленим .png",
     category: "rolls"
   },
   {
