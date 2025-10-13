@@ -357,7 +357,7 @@ const menuItems: MenuItemType[] = [
     name: "Суші вугор",
     description: "Вугор, рис, унагі соус, кунжут",
     price: 69,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Суші вугор.png",
     category: "krim-sushi"
   },
   {
