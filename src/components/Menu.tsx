@@ -422,7 +422,7 @@ const menuItems: MenuItemType[] = [
     name: "Макі авокадо",
     description: "Авокадо, кунжут, рис, норі, унагі соус",
     price: 79,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Макі авокадо.png",
     category: "futo-maki"
   },
   {
