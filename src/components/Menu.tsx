@@ -195,7 +195,7 @@ const menuItems: MenuItemType[] = [
     name: "Запечений Чікен",
     description: "Курка теріякі, крем-сир, тамаго, ананас, унагі соус, кунжут, рис, норі, сирний соус",
     price: 189,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Запечений з мідіями і беконом.jpg",
     category: "zapecheni"
   },
   {
