@@ -349,7 +349,7 @@ const menuItems: MenuItemType[] = [
     name: "Суші тунець",
     description: "Тунець, рис",
     price: 49,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Суші тунець.png",
     category: "krim-sushi"
   },
   {
