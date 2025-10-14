@@ -446,7 +446,7 @@ const menuItems: MenuItemType[] = [
     name: "Макі тунець",
     description: "Тунець, рис, норі",
     price: 99,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Макі тунець.png",
     category: "futo-maki"
   },
   {
