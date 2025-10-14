@@ -114,7 +114,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Фієста'",
     description: "20 шт / 480 гр: Філадельфія 1/2, Каліфорнія з крабом в ікрі 1/2, Каліфорнія з тунцем теріякі 1/2, Лавв Чіз Торі 1/2, Макі вершковий лосось 1/2",
     price: 369,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Сет Фієста.jpg",
     category: "sets"
   },
   {
