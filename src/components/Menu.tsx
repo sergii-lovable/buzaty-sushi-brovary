@@ -430,7 +430,7 @@ const menuItems: MenuItemType[] = [
     name: "Макі лосось",
     description: "Лосось, рис, норі",
     price: 99,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Макі лосось.png",
     category: "futo-maki"
   },
   {
