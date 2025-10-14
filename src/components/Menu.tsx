@@ -146,7 +146,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Фішка'",
     description: "32 шт / 920 гр: Філадельфія, Філадельфія Грін, Каліфорнія з беконом, Норвезький",
     price: 619,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Сет Фішка1.jpg",
     category: "sets"
   },
   {
