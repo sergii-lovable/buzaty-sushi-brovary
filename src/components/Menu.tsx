@@ -236,7 +236,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з креветкою в кунжуті",
     description: "Креветка, авокадо, майонез, рис, норі, кунжут",
     price: 209,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліфорнія з креветкою в кунжуті1.jpg",
     category: "kalifornija"
   },  
   {
