@@ -253,7 +253,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з тунцем теріякі",
     description: "Тунець, огірок, майонез, рис, норі, унагі соус, кунжут",
     price: 199,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліфорнія з беконом в кунжуті1.jpg",
     category: "kalifornija"
   },  
   {
