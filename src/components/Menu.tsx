@@ -470,7 +470,7 @@ const menuItems: MenuItemType[] = [
     name: "Макі вугор",
     description: "Вугор, унагі соус, кунжут, рис, норі",
     price: 129,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Макі вугор.png",
     category: "futo-maki"
   },
   {
