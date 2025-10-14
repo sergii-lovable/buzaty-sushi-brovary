@@ -162,7 +162,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Комбі Сет'",
     description: "32 шт /1000 г: Філадельфія 50/50, Ніжність, Запечений Чікен, Запечений з лососем 1/2, Запечений з тунцем теріякі 1/2",
     price: 649,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Комбі2.jpg",
     category: "sets"
   },
   {
