@@ -211,7 +211,7 @@ const menuItems: MenuItemType[] = [
     name: "Запечений з тунцем теріякі",
     description: "Тунець теріякі, тамаго, огірок, унагі соус, рис, норі, кунжут, сирний соус",
     price: 199,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Запечений з тунцем теріякі.jpg",
     category: "zapecheni"
   },
   {
