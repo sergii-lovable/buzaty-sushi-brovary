@@ -526,7 +526,7 @@ const menuItems: MenuItemType[] = [
     name: "Біг рол з лососем і тунцем теріякі",
     description: "Лосось, тунець теріякі, огірок, салат, майонез, рис, норі",
     price: 219,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Біг рол з лососем і тунцем теріякі1.jpg",
     category: "futo-maki"
   },
   // Оригінальні роли / ЧІЗ РОЛИ
