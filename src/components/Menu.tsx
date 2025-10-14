@@ -219,7 +219,7 @@ const menuItems: MenuItemType[] = [
     name: "Запечений Філадельфія",
     description: "Лосось, крем-сир, тамаго, огірок, унагі соус, рис, норі, кунжут, сирний соус",
     price: 209,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Запечений Філадельфія.jpg",
     category: "zapecheni"
   },
   {
