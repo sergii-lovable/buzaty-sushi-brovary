@@ -519,7 +519,7 @@ const menuItems: MenuItemType[] = [
     name: "Біг рол з лососем слабосоленим",
     description: "Лосось с/с, майонез, огірок, рис, норі",
     price: 219,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Біг рол з лососем слабосоленим1.jpg",
     category: "futo-maki"
   },
   {
