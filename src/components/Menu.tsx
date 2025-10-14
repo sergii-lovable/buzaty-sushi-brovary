@@ -170,7 +170,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Фаворит'",
     description: "48 шт /1550 г: Філадельфія з лососем с/с, Чіз рол з лососем, Канада, Філадельфія Грін, Запечений з лососем, Запечений з тунцем теріякі",
     price: 999,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Комбі сет.jpg",
     category: "sets"
   },
   {
