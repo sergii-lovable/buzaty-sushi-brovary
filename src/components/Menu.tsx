@@ -154,7 +154,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Хіт Сет'",
     description: "32 шт /900 г: Чіз рол з креветкою, Філадельфія з беконом, Ніжність, Макі авокадо",
     price: 639,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Хіт Сет.jpg",
     category: "sets"
   },
   {
