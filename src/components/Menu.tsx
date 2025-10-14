@@ -130,7 +130,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Популярний'",
     description: "32 шт / 820 г: Філадельфія, Осака, Каліфорнія з тунцем теріякі, Макі вершковий лосось",
     price: 549,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Популярний.jpg",
     category: "sets"
   },
   {
