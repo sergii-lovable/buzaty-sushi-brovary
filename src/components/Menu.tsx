@@ -406,7 +406,7 @@ const menuItems: MenuItemType[] = [
     name: "Макі огірок",
     description: "Огірок, кунжут, рис, норі",
     price: 69,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Макі огірок.png",
     category: "futo-maki"
   },
   {
