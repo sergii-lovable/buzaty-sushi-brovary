@@ -106,7 +106,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Суші Мікс'",
     description: "20 шт / 405 гр: Філадельфія 1/2, Каліфорнія з лососем в ікрі 1/2, Каліфорнія з крабом в кунжуті 1/2, Макі огірок",
     price: 369,
-    image: "/images/Суші Мікс.png",
+    image: "/images/Суші Мікс.jpg",
     category: "sets"
   },
   {
