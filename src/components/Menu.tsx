@@ -510,7 +510,7 @@ const menuItems: MenuItemType[] = [
     name: "Біг рол з тунцем спайсі",
     description: "Тунець спайсі, салат, помідор, майонез, рис, норі",
     price: 209,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Біг рол з тунцем спайсі.png",
     category: "futo-maki"
   },
   {
