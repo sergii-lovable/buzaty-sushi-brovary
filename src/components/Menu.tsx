@@ -138,7 +138,7 @@ const menuItems: MenuItemType[] = [
     name: "Сет 'Філадельфія Плюс'",
     description: "26 шт / 800 гр: Філадельфія з лососем с/с, Лава Чіз Торі, Канада, Крім-суші з лососем 2шт",
     price: 569,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Філадельфія плюс1.jpg",
     category: "sets"
   },
   {
