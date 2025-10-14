@@ -244,7 +244,8 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з беконом в кунжуті",
     description: "Бекон, огірок, майонез, рис, норі, унагі соус, кунжут",
     price: 179,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліфорнія з беконом в кунжуті1.jpg
+      ",
     category: "kalifornija"
   },  
   {
