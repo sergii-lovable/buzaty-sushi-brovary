@@ -415,7 +415,7 @@ const menuItems: MenuItemType[] = [
     name: "Хіяші макі",
     description: "Суміш водоростей, горіховий соус, рис, норі",
     price: 79,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/hiyashi_maki-900x600.png",
     category: "futo-maki"
   },
   {
