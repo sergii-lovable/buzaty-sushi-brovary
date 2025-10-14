@@ -502,7 +502,7 @@ const menuItems: MenuItemType[] = [
     name: "Норвезький",
     description: "Креветка, огірок, крем-сир, ікра масаго, рис, норі",
     price: 229,
-    image: "/images/Норвезький.png",
+    image: "/images/Норвезький.jpg",
     category: "futo-maki"
   },
   {
