@@ -227,7 +227,7 @@ const menuItems: MenuItemType[] = [
     name: "Запечений з вугрем",
     description: "Вугор, тамаго, авокадо, крем-сир, унагі соус, рис, норі, кунжут, сирний соус",
     price: 239,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Запечений з вугрем.jpg",
     category: "zapecheni"
   },
  // Каліфорнія меню
