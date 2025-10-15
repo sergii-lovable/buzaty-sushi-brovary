@@ -575,7 +575,7 @@ const menuItems: MenuItemType[] = [
     name: "Чіз рол з лососем",
     description: "Лосось, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
     price: 199,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Чіз рол з лососем.png",
     category: "original"
   },
   {
