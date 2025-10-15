@@ -600,7 +600,7 @@ const menuItems: MenuItemType[] = [
     name: "Салат Чука",
     description: "Класичний японський салат із водоростей з горіховим соусом",
     price: 129,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Chukka-sarada.jpg",
     category: "salat"
   },
    // Напої
