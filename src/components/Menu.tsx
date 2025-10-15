@@ -559,7 +559,7 @@ const menuItems: MenuItemType[] = [
     name: "Осака",
     description: "Лосось с/с, креветка, ікра масаго, крем-сир, огірок, рис, норі",
     price: 229,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Осака.jpg",
     category: "original"
   },
   {
