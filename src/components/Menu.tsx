@@ -543,7 +543,7 @@ const menuItems: MenuItemType[] = [
     name: "Лава Чіз Торі",
     description: "Курка теріякі, крем-сир, тамаго, соус лава, рис, норі",
     price: 189,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Лава Чіз Торі1.png",
     category: "original"
   },
   {
