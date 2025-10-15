@@ -266,7 +266,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 33,
     name: "Каліфорнія з лососем в кунжуті",
-    description: "Лосось, огірок, авокадо, майонез, рис, норі, унагі соус, кунжут",
+    description: "Лосось, огірок, авокадо, майонез, рис, норі, кунжут",
     price: 199,
     image: "/images/Каліфорнія з лососем в кунжуті.jpg",
     category: "kalifornija"
@@ -274,7 +274,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 34,
     name: "Каліфорнія з лососем слабосолоним",
-    description: "Лосось, огірок, авокадо, майонез, рис, норі, кунжут",
+    description: "Лосось с/с, огірок, авокадо, майонез, рис, норі, кунжут",
     price: 209,
     image: "/images/Каліфорнія з лососем в кунжуті.jpg",
     category: "kalifornija"
