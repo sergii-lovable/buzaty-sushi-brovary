@@ -583,7 +583,7 @@ const menuItems: MenuItemType[] = [
     name: "Чіз рол з креветкою",
     description: "Креветка, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
     price: 229,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Чіз рол з креветкою.png",
     category: "original"
   },
   {
