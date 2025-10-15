@@ -591,7 +591,7 @@ const menuItems: MenuItemType[] = [
     name: "Чіз рол з вугрем",
     description: "Вугор, крем-сир, огірок, тамаго, унагі соус, кунжут, сир Чедер, рис, норі",
     price: 239,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Чіз рол з вугрем.jpg",
     category: "original"
   },
    // Салат Чука
