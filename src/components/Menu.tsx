@@ -608,7 +608,7 @@ const menuItems: MenuItemType[] = [
     id: 76,
     name: "Coca-Cola 0.33л",
     description: "Класична кола в банці",
-    price: 40,
+    price: 45,
     image: "/images/кока кола-30.png",
     category: "drinks"
   },
