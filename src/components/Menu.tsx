@@ -551,7 +551,7 @@ const menuItems: MenuItemType[] = [
     name: "Ніжність",
     description: "Лосось, крем-сир, тамаго, крабовий соус, рис, норі",
     price: 209,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Рол Ніжність.jpg",
     category: "original"
   },
   {
