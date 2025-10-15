@@ -535,7 +535,7 @@ const menuItems: MenuItemType[] = [
     name: "Канада",
     description: "Вугор, крем-сир, огірок, тамаго, краб-кейк, кунжут, рис, норі, унагі соус",
     price: 209,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Канада.jpg",
     category: "original"
   },
   {
