@@ -234,7 +234,7 @@ const menuItems: MenuItemType[] = [
    {
     id: 29,
     name: "Каліфорнія з креветкою в кунжуті",
-    description: "Креветка, авокадо, майонез, рис, норі, кунжут",
+    description: "Креветка, огірок, авокадо, майонез, рис, норі, кунжут",
     price: 209,
     image: "/images/Каліфорнія з креветкою в кунжуті1.jpg",
     category: "kalifornija"
@@ -242,7 +242,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 30,
     name: "Каліфорнія з беконом в кунжуті",
-    description: "Бекон, огірок, майонез, рис, норі, унагі соус, кунжут",
+    description: "Бекон, огірок, помідор, майонез, рис, норі, унагі соус, кунжут",
     price: 179,
     image: "/images/Каліфорнія з беконом в кунжуті1.jpg",      
     category: "kalifornija"
@@ -250,7 +250,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 31,
     name: "Каліфорнія з тунцем теріякі",
-    description: "Тунець, огірок, майонез, рис, норі, унагі соус, кунжут",
+    description: "Тунець, огірок, авокадо, майонез, рис, норі, унагі соус, кунжут",
     price: 199,
     image: "/images/Каліфорнія з беконом в кунжуті1.jpg",
     category: "kalifornija"
@@ -258,7 +258,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 32,
     name: "Каліфорнія з вугрем в кунжуті",
-    description: "Вугор, огірок, майонез, рис, норі, унагі соус, кунжут",
+    description: "Вугор, огірок, авокадо, майонез, рис, норі, унагі соус, кунжут",
     price: 229,
     image: "/images/Каліфорнія з вугрем в кунжуті1.jpg",
     category: "kalifornija"
@@ -282,7 +282,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 35,
     name: "Каліфорнія з крабом в ікрі",
-    description: "Краб-кейк, авокадо, майонез, рис, норі, ікра масаго",
+    description: "Краб-кейк, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 199,
     image: "/images/sushi-roll.jpg",
     category: "kalifornija"
@@ -290,7 +290,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 36,
     name: "Каліфорнія з лососем в ікрі",
-    description: "Лосось, авокадо, майонез, рис, норі, ікра масаго",
+    description: "Лосось, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 219,
     image: "/images/sushi-roll.jpg",
     category: "kalifornija"
@@ -298,7 +298,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 37,
     name: "Каліфорнія з тунцем в ікрі",
-    description: "Тунець, авокадо, майонез, рис, норі, ікра масаго",
+    description: "Тунець, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 219,
     image: "/images/sushi-roll.jpg",
     category: "kalifornija"
@@ -306,7 +306,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 38,
     name: "Каліфорнія з лососем слабосоленим в ікрі",
-    description: "Лосось с/с, авокадо, майонез, рис, норі, ікра масаго",
+    description: "Лосось с/с, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 209,
     image: "/images/sushi-roll.jpg",
     category: "kalifornija"
@@ -314,7 +314,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 39,
     name: "Каліфорнія з креветкою в ікрі",
-    description: "Креветка, авокадо, майонез, рис, норі, ікра масаго",
+    description: "Креветка, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 229,
     image: "/images/sushi-roll.jpg",
     category: "kalifornija"
