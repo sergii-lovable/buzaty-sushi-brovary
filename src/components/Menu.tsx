@@ -292,7 +292,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з лососем в ікрі",
     description: "Лосось, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 219,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліф з лососем в ікрі.png",
     category: "kalifornija"
   },  
   {
@@ -308,7 +308,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з лососем слабосоленим в ікрі",
     description: "Лосось с/с, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 209,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліф з лососем в ікрі.png",
     category: "kalifornija"
   },  
   {
