@@ -316,7 +316,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з креветкою в ікрі",
     description: "Креветка, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 229,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліфорнія з креветкою в ікрі.png",
     category: "kalifornija"
   },  
   // Суші / крім-суші
