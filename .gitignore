@@ -25,3 +25,4 @@ dist-ssr
 playwright-report/index.html
 /test-results
 tests/*snapshots/*.png
+.specstory/*
