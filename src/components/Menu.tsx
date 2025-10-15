@@ -284,7 +284,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з крабом в ікрі",
     description: "Краб-кейк, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 199,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліфорнія з крабом в ікрі1.png",
     category: "kalifornija"
   },  
   {
