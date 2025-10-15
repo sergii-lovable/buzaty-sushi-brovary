@@ -567,7 +567,7 @@ const menuItems: MenuItemType[] = [
     name: "Червоний дракон",
     description: "Вугор, лосось, тамаго, авокадо, ікра масаго, майонез, рис, норі",
     price: 309,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Червоний дракон.png",
     category: "original"
   },
   {
