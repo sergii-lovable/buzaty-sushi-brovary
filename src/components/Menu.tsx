@@ -300,7 +300,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з тунцем в ікрі",
     description: "Тунець, огірок, авокадо, майонез, рис, норі, ікра масаго",
     price: 219,
-    image: "/images/sushi-roll.jpg",
+    image: "/images/Каліф з тунцем в ікрі.png",
     category: "kalifornija"
   },  
   {
