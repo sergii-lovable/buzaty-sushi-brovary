@@ -609,8 +609,8 @@ const menuItems: MenuItemType[] = [
     name: "Coca-Cola 0.33л",
     description: "Класична кола в банці",
     price: 40,
-    image: "/images/sushi-roll.jpg",
-    category: "drinks1"
+    image: "/images/кока кола-30.png",
+    category: "drinks"
   },
 ];
 
