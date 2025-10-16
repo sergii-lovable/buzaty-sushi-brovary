@@ -252,7 +252,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з тунцем теріякі",
     description: "Тунець, огірок, авокадо, майонез, рис, норі, унагі соус, кунжут",
     price: 199,
-    image: "/images/Каліфорнія з тунцем теріякі в кунжуті1.jpg",
+    image: "/images/Каліфорнія з вугрем в кунжуті1-1.jpg",
     category: "kalifornija"
   },  
   {
@@ -260,7 +260,7 @@ const menuItems: MenuItemType[] = [
     name: "Каліфорнія з вугрем в кунжуті",
     description: "Вугор, огірок, авокадо, майонез, рис, норі, унагі соус, кунжут",
     price: 229,
-    image: "/images/Каліфорнія з вугрем в кунжуті1.jpg",
+    image: "/images/Каліфорнія з вугрем в кунжуті1-1.jpg",
     category: "kalifornija"
   },  
   {
