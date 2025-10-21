@@ -33,7 +33,7 @@ const menuItems: MenuItemType[] = [
     name: "Філадельфія з лососем слабосоленим",
     description: "Лосось с/с, крем-сир, огірок, ікра масаго, рис, норі",
     price: 239,
-    image: "/images/Філадельфія з лососем слабосоленим .png",
+    image: "/images/Філадельфія.jpg",
     category: "rolls"
   },
   {
