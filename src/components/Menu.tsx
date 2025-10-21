@@ -31,7 +31,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 4,
     name: "Філадельфія з лососем слабосоленим",
-    description: "Лосось с/с, крем-сир, огірок, ікра масаго, рис, норі",
+    description: "Лосось с/с, крем-сир, огірок, рис, норі",
     price: 239,
     image: "/images/Філадельфія.jpg",
     category: "rolls"
@@ -71,7 +71,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 9,
     name: "Філадельфія з тунцем",
-    description: "Тунець, крем-сир, огірок, ікра масаго, рис, норі",
+    description: "Тунець, крем-сир, огірок, рис, норі",
     price: 199,
     image: "/images/Філадельфія з тунцем.png",
     category: "rolls"
@@ -79,7 +79,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 10,
     name: "Філадельфія з лососем і тунцем",
-    description: "Лосось, тунець, крем-сир, авокадо, ікра масаго, рис, норі",
+    description: "Лосось, тунець, крем-сир, авокадо, рис, норі",
     price: 309,
     image: "/images/Філадельфія з лососем і тунцем.jpg",
     category: "rolls"
@@ -250,7 +250,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 31,
     name: "Каліфорнія з тунцем теріякі",
-    description: "Тунець, огірок, авокадо, майонез, рис, норі, унагі соус, кунжут",
+    description: "Тунець теріякі, огірок, авокадо, майонез, рис, норі, унагі соус, кунжут",
     price: 199,
     image: "/images/Каліфорнія з вугрем в кунжуті1-1.jpg",
     category: "kalifornija"
@@ -484,7 +484,7 @@ const menuItems: MenuItemType[] = [
   {
     id: 61,
     name: "Рол овочевий",
-    description: "Листя салату, огірок, помідор, рис, норі",
+    description: "Листя салату, огірок, авокадо, помідор, рис, норі",
     price: 169,
     image: "/images/Рол овочевий.png",
     category: "futo-maki"
