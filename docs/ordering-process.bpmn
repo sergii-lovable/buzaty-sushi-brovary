@@ -9,198 +9,198 @@
     
     <!-- Task: Browse Menu -->
     <bpmn:task id="Task_BrowseMenu" name="Browse menu">
-      <bpmn:incoming>Flow_1</incoming>
-      <bpmn:incoming>Flow_BackToMenu</incoming>
-      <bpmn:outgoing>Flow_2</outgoing>
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:incoming>Flow_BackToMenu</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Gateway: Filter by category? -->
     <bpmn:exclusiveGateway id="Gateway_FilterMenu" name="Filter by category?">
-      <bpmn:incoming>Flow_2</incoming>
-      <bpmn:outgoing>Flow_FilterYes</outgoing>
-      <bpmn:outgoing>Flow_FilterNo</outgoing>
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_FilterYes</bpmn:outgoing>
+      <bpmn:outgoing>Flow_FilterNo</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Task: Select Category -->
     <bpmn:task id="Task_SelectCategory" name="Select category filter">
-      <bpmn:incoming>Flow_FilterYes</incoming>
-      <bpmn:outgoing>Flow_3</outgoing>
+      <bpmn:incoming>Flow_FilterYes</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: View Items -->
     <bpmn:task id="Task_ViewItems" name="View menu items">
-      <bpmn:incoming>Flow_3</incoming>
-      <bpmn:incoming>Flow_FilterNo</incoming>
-      <bpmn:outgoing>Flow_4</outgoing>
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:incoming>Flow_FilterNo</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Select Item -->
     <bpmn:task id="Task_SelectItem" name="Select menu item">
-      <bpmn:incoming>Flow_4</incoming>
-      <bpmn:outgoing>Flow_5</outgoing>
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Add to Cart -->
     <bpmn:task id="Task_AddToCart" name="Add item to cart">
-      <bpmn:incoming>Flow_5</incoming>
-      <bpmn:outgoing>Flow_6</outgoing>
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Show Notification -->
     <bpmn:task id="Task_ShowToast" name="Show notification">
-      <bpmn:incoming>Flow_6</incoming>
-      <bpmn:outgoing>Flow_7</outgoing>
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Gateway: Want more items? -->
     <bpmn:exclusiveGateway id="Gateway_MoreItems" name="Want more items?">
-      <bpmn:incoming>Flow_7</incoming>
-      <bpmn:incoming>Flow_CancelCart</incoming>
-      <bpmn:outgoing>Flow_MoreYes</outgoing>
-      <bpmn:outgoing>Flow_MoreNo</outgoing>
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+      <bpmn:incoming>Flow_CancelCart</bpmn:incoming>
+      <bpmn:outgoing>Flow_MoreYes</bpmn:outgoing>
+      <bpmn:outgoing>Flow_MoreNo</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Task: Open Cart -->
     <bpmn:task id="Task_OpenCart" name="Open cart">
-      <bpmn:incoming>Flow_MoreNo</incoming>
-      <bpmn:outgoing>Flow_8</outgoing>
+      <bpmn:incoming>Flow_MoreNo</bpmn:incoming>
+      <bpmn:outgoing>Flow_8</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Review Cart -->
     <bpmn:task id="Task_ReviewCart" name="Review cart contents">
-      <bpmn:incoming>Flow_8</incoming>
-      <bpmn:incoming>Flow_CartModified</incoming>
-      <bpmn:outgoing>Flow_9</outgoing>
+      <bpmn:incoming>Flow_8</bpmn:incoming>
+      <bpmn:incoming>Flow_CartModified</bpmn:incoming>
+      <bpmn:outgoing>Flow_9</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Gateway: Modify cart? -->
     <bpmn:exclusiveGateway id="Gateway_ModifyCart" name="Modify cart?">
-      <bpmn:incoming>Flow_9</incoming>
-      <bpmn:outgoing>Flow_ModifyQuantity</outgoing>
-      <bpmn:outgoing>Flow_RemoveItem</outgoing>
-      <bpmn:outgoing>Flow_NoModify</outgoing>
+      <bpmn:incoming>Flow_9</bpmn:incoming>
+      <bpmn:outgoing>Flow_ModifyQuantity</bpmn:outgoing>
+      <bpmn:outgoing>Flow_RemoveItem</bpmn:outgoing>
+      <bpmn:outgoing>Flow_NoModify</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Task: Update Quantity -->
     <bpmn:task id="Task_UpdateQuantity" name="Update item quantity">
-      <bpmn:incoming>Flow_ModifyQuantity</incoming>
-      <bpmn:outgoing>Flow_10</outgoing>
+      <bpmn:incoming>Flow_ModifyQuantity</bpmn:incoming>
+      <bpmn:outgoing>Flow_10</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Remove Item -->
     <bpmn:task id="Task_RemoveItem" name="Remove item from cart">
-      <bpmn:incoming>Flow_RemoveItem</incoming>
-      <bpmn:outgoing>Flow_11</outgoing>
+      <bpmn:incoming>Flow_RemoveItem</bpmn:incoming>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Gateway: Merge after modifications -->
     <bpmn:exclusiveGateway id="Gateway_MergeModify">
-      <bpmn:incoming>Flow_10</incoming>
-      <bpmn:incoming>Flow_11</incoming>
-      <bpmn:outgoing>Flow_CartModified</outgoing>
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+      <bpmn:incoming>Flow_11</bpmn:incoming>
+      <bpmn:outgoing>Flow_CartModified</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Gateway: Proceed to checkout? -->
     <bpmn:exclusiveGateway id="Gateway_Checkout" name="Proceed to checkout?">
-      <bpmn:incoming>Flow_NoModify</incoming>
-      <bpmn:outgoing>Flow_CheckoutYes</outgoing>
-      <bpmn:outgoing>Flow_CheckoutNo</outgoing>
+      <bpmn:incoming>Flow_NoModify</bpmn:incoming>
+      <bpmn:outgoing>Flow_CheckoutYes</bpmn:outgoing>
+      <bpmn:outgoing>Flow_CheckoutNo</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Task: Open Form -->
     <bpmn:task id="Task_OpenForm" name="Open order form">
-      <bpmn:incoming>Flow_CheckoutYes</incoming>
-      <bpmn:incoming>Flow_ValidationError</incoming>
-      <bpmn:outgoing>Flow_12</outgoing>
+      <bpmn:incoming>Flow_CheckoutYes</bpmn:incoming>
+      <bpmn:incoming>Flow_ValidationError</bpmn:incoming>
+      <bpmn:outgoing>Flow_12</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Fill Customer Info -->
     <bpmn:task id="Task_FillInfo" name="Fill customer information">
-      <bpmn:incoming>Flow_12</incoming>
-      <bpmn:outgoing>Flow_13</outgoing>
+      <bpmn:incoming>Flow_12</bpmn:incoming>
+      <bpmn:outgoing>Flow_13</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Gateway: Add optional comment? -->
     <bpmn:exclusiveGateway id="Gateway_Comment" name="Add optional comment?">
-      <bpmn:incoming>Flow_13</incoming>
-      <bpmn:outgoing>Flow_CommentYes</outgoing>
-      <bpmn:outgoing>Flow_CommentNo</outgoing>
+      <bpmn:incoming>Flow_13</bpmn:incoming>
+      <bpmn:outgoing>Flow_CommentYes</bpmn:outgoing>
+      <bpmn:outgoing>Flow_CommentNo</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Task: Add Comment -->
     <bpmn:task id="Task_AddComment" name="Add comment">
-      <bpmn:incoming>Flow_CommentYes</incoming>
-      <bpmn:outgoing>Flow_14</outgoing>
+      <bpmn:incoming>Flow_CommentYes</bpmn:incoming>
+      <bpmn:outgoing>Flow_14</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Review Order -->
     <bpmn:task id="Task_ReviewOrder" name="Review order summary">
-      <bpmn:incoming>Flow_14</incoming>
-      <bpmn:incoming>Flow_CommentNo</incoming>
-      <bpmn:incoming>Flow_APIError</incoming>
-      <bpmn:outgoing>Flow_15</outgoing>
+      <bpmn:incoming>Flow_14</bpmn:incoming>
+      <bpmn:incoming>Flow_CommentNo</bpmn:incoming>
+      <bpmn:incoming>Flow_APIError</bpmn:incoming>
+      <bpmn:outgoing>Flow_15</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Submit Order -->
     <bpmn:task id="Task_SubmitOrder" name="Submit order">
-      <bpmn:incoming>Flow_15</incoming>
-      <bpmn:outgoing>Flow_16</outgoing>
+      <bpmn:incoming>Flow_15</bpmn:incoming>
+      <bpmn:outgoing>Flow_16</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Gateway: Form validation -->
     <bpmn:exclusiveGateway id="Gateway_Validation" name="Form validation">
-      <bpmn:incoming>Flow_16</incoming>
-      <bpmn:outgoing>Flow_ValidationValid</outgoing>
-      <bpmn:outgoing>Flow_ValidationInvalid</outgoing>
+      <bpmn:incoming>Flow_16</bpmn:incoming>
+      <bpmn:outgoing>Flow_ValidationValid</bpmn:outgoing>
+      <bpmn:outgoing>Flow_ValidationInvalid</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Task: Show Validation Error -->
     <bpmn:task id="Task_ValidationError" name="Show validation error">
-      <bpmn:incoming>Flow_ValidationInvalid</incoming>
-      <bpmn:outgoing>Flow_ValidationError</outgoing>
+      <bpmn:incoming>Flow_ValidationInvalid</bpmn:incoming>
+      <bpmn:outgoing>Flow_ValidationError</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Prepare Data -->
     <bpmn:task id="Task_PrepareData" name="Prepare order data">
-      <bpmn:incoming>Flow_ValidationValid</incoming>
-      <bpmn:outgoing>Flow_17</outgoing>
+      <bpmn:incoming>Flow_ValidationValid</bpmn:incoming>
+      <bpmn:outgoing>Flow_17</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Send to API -->
     <bpmn:task id="Task_SendAPI" name="Send to Google Forms API">
-      <bpmn:incoming>Flow_17</incoming>
-      <bpmn:outgoing>Flow_18</outgoing>
+      <bpmn:incoming>Flow_17</bpmn:incoming>
+      <bpmn:outgoing>Flow_18</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Gateway: API response -->
     <bpmn:exclusiveGateway id="Gateway_APIResponse" name="API response">
-      <bpmn:incoming>Flow_18</incoming>
-      <bpmn:outgoing>Flow_APISuccess</outgoing>
-      <bpmn:outgoing>Flow_APIFail</outgoing>
+      <bpmn:incoming>Flow_18</bpmn:incoming>
+      <bpmn:outgoing>Flow_APISuccess</bpmn:outgoing>
+      <bpmn:outgoing>Flow_APIFail</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
     <!-- Task: Show Error -->
     <bpmn:task id="Task_ShowError" name="Show error message">
-      <bpmn:incoming>Flow_APIFail</incoming>
-      <bpmn:outgoing>Flow_APIError</outgoing>
+      <bpmn:incoming>Flow_APIFail</bpmn:incoming>
+      <bpmn:outgoing>Flow_APIError</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Show Success -->
     <bpmn:task id="Task_ShowSuccess" name="Show success message">
-      <bpmn:incoming>Flow_APISuccess</incoming>
-      <bpmn:outgoing>Flow_19</outgoing>
+      <bpmn:incoming>Flow_APISuccess</bpmn:incoming>
+      <bpmn:outgoing>Flow_19</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Clear Cart -->
     <bpmn:task id="Task_ClearCart" name="Clear cart">
-      <bpmn:incoming>Flow_19</incoming>
-      <bpmn:outgoing>Flow_20</outgoing>
+      <bpmn:incoming>Flow_19</bpmn:incoming>
+      <bpmn:outgoing>Flow_20</bpmn:outgoing>
     </bpmn:task>
     
     <!-- Task: Close Form -->
     <bpmn:task id="Task_CloseForm" name="Close form">
-      <bpmn:incoming>Flow_20</incoming>
-      <bpmn:outgoing>Flow_21</outgoing>
+      <bpmn:incoming>Flow_20</bpmn:incoming>
+      <bpmn:outgoing>Flow_21</bpmn:outgoing>
     </bpmn:task>
     
     <!-- End Event -->
@@ -212,10 +212,10 @@
     <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_CustomerVisit" targetRef="Task_BrowseMenu" />
     <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_BrowseMenu" targetRef="Gateway_FilterMenu" />
     <bpmn:sequenceFlow id="Flow_FilterYes" name="Yes" sourceRef="Gateway_FilterMenu" targetRef="Task_SelectCategory">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">filter == true</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">filter == true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_FilterNo" name="No" sourceRef="Gateway_FilterMenu" targetRef="Task_ViewItems">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">filter == false</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">filter == false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_SelectCategory" targetRef="Task_ViewItems" />
     <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_ViewItems" targetRef="Task_SelectItem" />
@@ -223,58 +223,58 @@
     <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_AddToCart" targetRef="Task_ShowToast" />
     <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_ShowToast" targetRef="Gateway_MoreItems" />
     <bpmn:sequenceFlow id="Flow_MoreYes" name="Yes" sourceRef="Gateway_MoreItems" targetRef="Task_BrowseMenu">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">moreItems == true</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">moreItems == true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_BackToMenu" sourceRef="Task_BrowseMenu" targetRef="Task_BrowseMenu" />
     <bpmn:sequenceFlow id="Flow_MoreNo" name="No" sourceRef="Gateway_MoreItems" targetRef="Task_OpenCart">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">moreItems == false</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">moreItems == false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_OpenCart" targetRef="Task_ReviewCart" />
     <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_ReviewCart" targetRef="Gateway_ModifyCart" />
     <bpmn:sequenceFlow id="Flow_ModifyQuantity" name="Update quantity" sourceRef="Gateway_ModifyCart" targetRef="Task_UpdateQuantity">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'updateQuantity'</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'updateQuantity'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_RemoveItem" name="Remove item" sourceRef="Gateway_ModifyCart" targetRef="Task_RemoveItem">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'removeItem'</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'removeItem'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_NoModify" name="No changes" sourceRef="Gateway_ModifyCart" targetRef="Gateway_Checkout">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'none'</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'none'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_UpdateQuantity" targetRef="Gateway_MergeModify" />
     <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_RemoveItem" targetRef="Gateway_MergeModify" />
     <bpmn:sequenceFlow id="Flow_CartModified" sourceRef="Gateway_MergeModify" targetRef="Task_ReviewCart" />
     <bpmn:sequenceFlow id="Flow_CheckoutYes" name="Confirm" sourceRef="Gateway_Checkout" targetRef="Task_OpenForm">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">checkout == true</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">checkout == true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_CheckoutNo" name="Cancel" sourceRef="Gateway_Checkout" targetRef="Gateway_MoreItems">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">checkout == false</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">checkout == false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_CancelCart" sourceRef="Gateway_MoreItems" targetRef="Gateway_MoreItems" />
     <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_OpenForm" targetRef="Task_FillInfo" />
     <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_FillInfo" targetRef="Gateway_Comment" />
     <bpmn:sequenceFlow id="Flow_CommentYes" name="Yes" sourceRef="Gateway_Comment" targetRef="Task_AddComment">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">comment == true</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">comment == true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_CommentNo" name="No" sourceRef="Gateway_Comment" targetRef="Task_ReviewOrder">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">comment == false</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">comment == false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_AddComment" targetRef="Task_ReviewOrder" />
     <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_ReviewOrder" targetRef="Task_SubmitOrder" />
     <bpmn:sequenceFlow id="Flow_16" sourceRef="Task_SubmitOrder" targetRef="Gateway_Validation" />
     <bpmn:sequenceFlow id="Flow_ValidationValid" name="Valid" sourceRef="Gateway_Validation" targetRef="Task_PrepareData">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">validation == 'valid'</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">validation == 'valid'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_ValidationInvalid" name="Invalid" sourceRef="Gateway_Validation" targetRef="Task_ValidationError">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">validation == 'invalid'</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">validation == 'invalid'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_ValidationError" sourceRef="Task_ValidationError" targetRef="Task_OpenForm" />
     <bpmn:sequenceFlow id="Flow_17" sourceRef="Task_PrepareData" targetRef="Task_SendAPI" />
     <bpmn:sequenceFlow id="Flow_18" sourceRef="Task_SendAPI" targetRef="Gateway_APIResponse" />
     <bpmn:sequenceFlow id="Flow_APISuccess" name="Success" sourceRef="Gateway_APIResponse" targetRef="Task_ShowSuccess">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">apiResponse == 'success'</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">apiResponse == 'success'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_APIFail" name="Error" sourceRef="Gateway_APIResponse" targetRef="Task_ShowError">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">apiResponse == 'error'</conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">apiResponse == 'error'</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_APIError" sourceRef="Task_ShowError" targetRef="Task_ReviewOrder" />
     <bpmn:sequenceFlow id="Flow_19" sourceRef="Task_ShowSuccess" targetRef="Task_ClearCart" />
@@ -289,9 +289,9 @@
       
       <!-- Start Event Shape -->
       <bpmndi:BPMNShape id="StartEvent_CustomerVisit_di" bpmnElement="StartEvent_CustomerVisit">
-        <omgdc:Bounds x="152" y="102" width="36" height="36" />
+        <dc:Bounds x="152" y="102" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="128" y="145" width="84" height="27" />
+          <dc:Bounds x="128" y="145" width="84" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       
