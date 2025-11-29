@@ -7,12 +7,11 @@
       <bpmn:outgoing>Flow_1</bpmn:outgoing>
     </bpmn:startEvent>
     
-    <!-- Task: Browse Menu -->
-    <bpmn:task id="Task_BrowseMenu" name="Browse menu">
+    <!-- User Task: Browse Menu -->
+    <bpmn:userTask id="Task_BrowseMenu" name="Browse menu">
       <bpmn:incoming>Flow_1</bpmn:incoming>
-      <bpmn:incoming>Flow_BackToMenu</bpmn:incoming>
       <bpmn:outgoing>Flow_2</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:userTask>
     
     <!-- Gateway: Filter by category? -->
     <bpmn:exclusiveGateway id="Gateway_FilterMenu" name="Filter by category?">
@@ -55,7 +54,6 @@
     <!-- Gateway: Want more items? -->
     <bpmn:exclusiveGateway id="Gateway_MoreItems" name="Want more items?">
       <bpmn:incoming>Flow_7</bpmn:incoming>
-      <bpmn:incoming>Flow_CancelCart</bpmn:incoming>
       <bpmn:outgoing>Flow_MoreYes</bpmn:outgoing>
       <bpmn:outgoing>Flow_MoreNo</bpmn:outgoing>
     </bpmn:exclusiveGateway>
@@ -66,12 +64,12 @@
       <bpmn:outgoing>Flow_8</bpmn:outgoing>
     </bpmn:task>
     
-    <!-- Task: Review Cart -->
-    <bpmn:task id="Task_ReviewCart" name="Review cart contents">
+    <!-- User Task: Review Cart -->
+    <bpmn:userTask id="Task_ReviewCart" name="Review cart contents">
       <bpmn:incoming>Flow_8</bpmn:incoming>
       <bpmn:incoming>Flow_CartModified</bpmn:incoming>
       <bpmn:outgoing>Flow_9</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:userTask>
     
     <!-- Gateway: Modify cart? -->
     <bpmn:exclusiveGateway id="Gateway_ModifyCart" name="Modify cart?">
@@ -107,18 +105,12 @@
       <bpmn:outgoing>Flow_CheckoutNo</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     
-    <!-- Task: Open Form -->
-    <bpmn:task id="Task_OpenForm" name="Open order form">
+    <!-- User Task: Fill Order Form -->
+    <bpmn:userTask id="Task_FillInfo" name="Fill order form">
       <bpmn:incoming>Flow_CheckoutYes</bpmn:incoming>
       <bpmn:incoming>Flow_ValidationError</bpmn:incoming>
-      <bpmn:outgoing>Flow_12</bpmn:outgoing>
-    </bpmn:task>
-    
-    <!-- Task: Fill Customer Info -->
-    <bpmn:task id="Task_FillInfo" name="Fill customer information">
-      <bpmn:incoming>Flow_12</bpmn:incoming>
       <bpmn:outgoing>Flow_13</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:userTask>
     
     <!-- Gateway: Add optional comment? -->
     <bpmn:exclusiveGateway id="Gateway_Comment" name="Add optional comment?">
@@ -133,13 +125,13 @@
       <bpmn:outgoing>Flow_14</bpmn:outgoing>
     </bpmn:task>
     
-    <!-- Task: Review Order -->
-    <bpmn:task id="Task_ReviewOrder" name="Review order summary">
+    <!-- User Task: Review Order -->
+    <bpmn:userTask id="Task_ReviewOrder" name="Review order summary">
       <bpmn:incoming>Flow_14</bpmn:incoming>
       <bpmn:incoming>Flow_CommentNo</bpmn:incoming>
       <bpmn:incoming>Flow_APIError</bpmn:incoming>
       <bpmn:outgoing>Flow_15</bpmn:outgoing>
-    </bpmn:task>
+    </bpmn:userTask>
     
     <!-- Task: Submit Order -->
     <bpmn:task id="Task_SubmitOrder" name="Submit order">
@@ -212,10 +204,10 @@
     <bpmn:sequenceFlow id="Flow_1" sourceRef="StartEvent_CustomerVisit" targetRef="Task_BrowseMenu" />
     <bpmn:sequenceFlow id="Flow_2" sourceRef="Task_BrowseMenu" targetRef="Gateway_FilterMenu" />
     <bpmn:sequenceFlow id="Flow_FilterYes" name="Yes" sourceRef="Gateway_FilterMenu" targetRef="Task_SelectCategory">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">filter == true</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=filter = true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_FilterNo" name="No" sourceRef="Gateway_FilterMenu" targetRef="Task_ViewItems">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">filter == false</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=filter = false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_SelectCategory" targetRef="Task_ViewItems" />
     <bpmn:sequenceFlow id="Flow_4" sourceRef="Task_ViewItems" targetRef="Task_SelectItem" />
@@ -223,58 +215,55 @@
     <bpmn:sequenceFlow id="Flow_6" sourceRef="Task_AddToCart" targetRef="Task_ShowToast" />
     <bpmn:sequenceFlow id="Flow_7" sourceRef="Task_ShowToast" targetRef="Gateway_MoreItems" />
     <bpmn:sequenceFlow id="Flow_MoreYes" name="Yes" sourceRef="Gateway_MoreItems" targetRef="Task_BrowseMenu">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">moreItems == true</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=moreItems = true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_BackToMenu" sourceRef="Task_BrowseMenu" targetRef="Task_BrowseMenu" />
     <bpmn:sequenceFlow id="Flow_MoreNo" name="No" sourceRef="Gateway_MoreItems" targetRef="Task_OpenCart">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">moreItems == false</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=moreItems = false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_8" sourceRef="Task_OpenCart" targetRef="Task_ReviewCart" />
     <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_ReviewCart" targetRef="Gateway_ModifyCart" />
     <bpmn:sequenceFlow id="Flow_ModifyQuantity" name="Update quantity" sourceRef="Gateway_ModifyCart" targetRef="Task_UpdateQuantity">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'updateQuantity'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=action = "updateQuantity"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_RemoveItem" name="Remove item" sourceRef="Gateway_ModifyCart" targetRef="Task_RemoveItem">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'removeItem'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=action = "removeItem"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_NoModify" name="No changes" sourceRef="Gateway_ModifyCart" targetRef="Gateway_Checkout">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">action == 'none'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=action = "none"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_UpdateQuantity" targetRef="Gateway_MergeModify" />
     <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_RemoveItem" targetRef="Gateway_MergeModify" />
     <bpmn:sequenceFlow id="Flow_CartModified" sourceRef="Gateway_MergeModify" targetRef="Task_ReviewCart" />
-    <bpmn:sequenceFlow id="Flow_CheckoutYes" name="Confirm" sourceRef="Gateway_Checkout" targetRef="Task_OpenForm">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">checkout == true</bpmn:conditionExpression>
+    <bpmn:sequenceFlow id="Flow_CheckoutYes" name="Confirm" sourceRef="Gateway_Checkout" targetRef="Task_FillInfo">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=checkout = true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_CheckoutNo" name="Cancel" sourceRef="Gateway_Checkout" targetRef="Gateway_MoreItems">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">checkout == false</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=checkout = false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_CancelCart" sourceRef="Gateway_MoreItems" targetRef="Gateway_MoreItems" />
-    <bpmn:sequenceFlow id="Flow_12" sourceRef="Task_OpenForm" targetRef="Task_FillInfo" />
     <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_FillInfo" targetRef="Gateway_Comment" />
     <bpmn:sequenceFlow id="Flow_CommentYes" name="Yes" sourceRef="Gateway_Comment" targetRef="Task_AddComment">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">comment == true</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=comment = true</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_CommentNo" name="No" sourceRef="Gateway_Comment" targetRef="Task_ReviewOrder">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">comment == false</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=comment = false</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_14" sourceRef="Task_AddComment" targetRef="Task_ReviewOrder" />
     <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_ReviewOrder" targetRef="Task_SubmitOrder" />
     <bpmn:sequenceFlow id="Flow_16" sourceRef="Task_SubmitOrder" targetRef="Gateway_Validation" />
     <bpmn:sequenceFlow id="Flow_ValidationValid" name="Valid" sourceRef="Gateway_Validation" targetRef="Task_PrepareData">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">validation == 'valid'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=validation = "valid"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_ValidationInvalid" name="Invalid" sourceRef="Gateway_Validation" targetRef="Task_ValidationError">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">validation == 'invalid'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=validation = "invalid"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_ValidationError" sourceRef="Task_ValidationError" targetRef="Task_OpenForm" />
+    <bpmn:sequenceFlow id="Flow_ValidationError" sourceRef="Task_ValidationError" targetRef="Task_FillInfo" />
     <bpmn:sequenceFlow id="Flow_17" sourceRef="Task_PrepareData" targetRef="Task_SendAPI" />
     <bpmn:sequenceFlow id="Flow_18" sourceRef="Task_SendAPI" targetRef="Gateway_APIResponse" />
     <bpmn:sequenceFlow id="Flow_APISuccess" name="Success" sourceRef="Gateway_APIResponse" targetRef="Task_ShowSuccess">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">apiResponse == 'success'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=apiResponse = "success"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_APIFail" name="Error" sourceRef="Gateway_APIResponse" targetRef="Task_ShowError">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">apiResponse == 'error'</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=apiResponse = "error"</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_APIError" sourceRef="Task_ShowError" targetRef="Task_ReviewOrder" />
     <bpmn:sequenceFlow id="Flow_19" sourceRef="Task_ShowSuccess" targetRef="Task_ClearCart" />
