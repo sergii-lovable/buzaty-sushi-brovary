@@ -45,7 +45,7 @@ const Footer = () => {
                 <meta itemProp="dayOfWeek" content="Sunday" />
                 <meta itemProp="opens" content="10:00" />
                 <meta itemProp="closes" content="21:00" />
-                <p>10:00-21:00</p>
+                <p>Приймаємо замовлення з 10:00 до 21:00</p>
                 <p className="text-sm mt-1">Доставка по м.Бровари на суму від 800 грн безкоштовна</p>
               </div>
             </div>
